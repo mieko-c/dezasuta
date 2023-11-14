@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+ul li {
+    padding: 0 20px;
+}

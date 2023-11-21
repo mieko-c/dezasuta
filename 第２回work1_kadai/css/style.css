@@ -84,11 +84,11 @@ img {
     justify-content: space-between;
     align-items: center;
     max-width: 960px;
+    margin: 0 auto;
 }
 
 .wrap3 ul {
     display: flex;
-    margin: 0 auto;
 }
 
 .wrap3 ul li {
@@ -102,7 +102,6 @@ img {
 
 .wrap3 h1 {
     padding: 0 50px;
-    margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -118,16 +117,10 @@ img {
     .wrap3 ul {
         display: block;
     }
-    .wrap3 h1 {
-        display: block;
-    }
     .wrap div {
         width: 100%;
     }
     .wrap2 div {
-        width: 100%;
-    }
-    .wrap3 ul {
         width: 100%;
     }
     .wrap3 ul li {

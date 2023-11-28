@@ -1,0 +1,52 @@
+@charset "utf-8";
+body {
+    background-color: #eeeeee;
+    margin: 0 auto;
+    max-width: 960px;
+}
+h1 {
+    color: seagreen;
+    display: flex;
+    justify-content: center;
+}
+.wrap ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.wrap ul li {
+    background-color: white;
+    margin-right: 20px;
+}
+.wrap ul li:last-child {
+    margin-right: 0;
+}
+.wrap ul li img {
+    vertical-align: bottom;
+    width: 100%;
+}
+.wrap ul li h2 {
+    border-left: 15px solid;
+    color: seagreen;
+    margin: 10px;
+    padding: 5px;
+}
+.wrap ul li p {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .wrap ul {
+        display: block;
+    }
+    .wrap ul :last-child {
+        margin-bottom: 0;
+    }
+    .wrap ul li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

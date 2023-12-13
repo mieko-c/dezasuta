@@ -7,12 +7,12 @@
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <header id="header"></header>
+    <header id="header">
         <div class="header_slider">
             <div><img src="images/pc_first-100.jpg" alt="店内の様子"></div>
         </div>
@@ -28,21 +28,31 @@
                     <li><a href="#acc">ACCESS</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#abo">ABOUT US</a></li>
+                    <li><a href="#men">MENU</a></li>
+                    <li><a href="#gal">GALLERY</a></li>
+                    <li><a href="#eve">EVENT</a></li>
+                    <li><a href="#acc">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- キャッチコピー -->
     <div class="lead">
-        <p class="medium_1">Have a happy day From a cup of coffee.</p>
-        <p class="large_1">ハッピーに溢れる１日を<br>１杯のコーヒーから。</p>
-        <p class="small_1">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+        <p class="lead-medium">Have a happy day From a cup of coffee.</p>
+        <p class="lead-large">ハッピーに溢れる１日を<br>１杯のコーヒーから。</p>
+        <p class="lead-small">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
     </div>
 
     <!-- ABOUT US -->
     <div id="abo" class="about_us">
-        <img src="images/pc_about-100.jpg" alt="コーヒーで乾杯">
+        <div class="about_img"><img src="images/pc_about-100.jpg" alt="コーヒーで乾杯"></div>
         <div class="text">
-            <img src="images/about_us@2x.png" alt="ABOUT US">
+            <h2><img src="images/about_us@2x.png" alt="ABOUT US"></h2>
             <p class="large_2">私たちが提供する<br>こだわりのコーヒー</p>
             <p class="small_2">
                 サービスを提供する上での想いや心がけていることなど、メッ<br>セージを文章で紹介します。サービスを提供する上での想い<br>や心がけていることなど、メッセージを文章で紹介します。サー<br>ビスを提供する上での想いや心がけていることなど、メッセー<br>ジを文章で紹介します。サービスを提供する上での想いや心<br>がけていることなど、メッセージを文章で紹介します。サービス<br>を提供する上での想いや心がけていることなど、メッセージを<br>文章で紹介します。
@@ -55,15 +65,15 @@
         <h2><img src="images/menu@2x.png" alt="MENU"></h2>
         <ul>
             <li><img src="images/pc_menu_drink-100.jpg" alt="アイスカフェオレ">
-                <h2>Drink</h2>
+                <h3>Drink</h3>
                 <p>ドリンクメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。</p>
             </li>
             <li><img src="images/pc_menu_food-100.jpg" alt="パスタ">
-                <h2>Food</h2>
+                <h3>Food</h3>
                 <p>フードメニューの概要を100文字程度で紹<br>介します。素材やこだわりなどをアピール<br>していきます。</p>
             </li>
             <li><img src="images/pc_menu_sweets-100.jpg" alt="ケーキ">
-                <h2>Sweets</h2>
+                <h3>Sweets</h3>
                 <p>スイーツメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。</p>
             </li>
         </ul>
@@ -84,11 +94,13 @@
     <!-- EVENT -->
     <section id="eve" class="event">
         <h2><img src="images/event@2x.png" alt="EVENT"></h2>
-        <ul>
-            <li><span class="mgr-47">2020.06.23</span><u>7月はイベント出店のため0/0お休みします</u></li>
-            <li><span class="mgr-47">2020.03.15</span><u>春の新商品新発売。話題のあのブランドとコラボ</u></li>
-            <li><span class="mgr-47">2020.02.06</span><u>コーヒーの日で30％OFFイベントを開催［3日間限定］</u></li>
-        </ul>
+        <div class="event_block">
+            <ul>
+                <li><time datetime="2020-06-23">2020.06.23</time><u>7月はイベント出店のため0/0お休みします</u></li>
+                <li><time datetime="2020-03-15">2020.03.15</time><u>春の新商品新発売。話題のあのブランドとコラボ</u></li>
+                <li><time datetime="2020-02-06">2020.02.06</time><u>コーヒーの日で30％OFFイベントを開催［3日間限定］</u></li>
+            </ul>
+        </div>
     </section>
 
     <!-- ACCESS -->
@@ -96,9 +108,17 @@
         <h2><img src="images/access@2x.png" alt="ACCESS"></h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51862.59270762113!2d139.65141627671855!3d35.666854983204246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0xf11cd9b2395b6677!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1701936316493!5m2!1sja!2sjp"
-            width="100%" height="471" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav Li').on('click', function () {
+                //ここの中に記述
+                $(".sp_nav").fadeToggle();
+                $(".sp_btn").toggleClass("open");
+            });
+        });
+    </script>
 </body>
 
 <footer>
@@ -110,8 +130,8 @@
     </div>
 
     <!-- DESIGN CAFE -->
-    <div class="design_cafe">
-        <h2><img src="images/design_cafe_logo_footer@2x.png" alt="DESIGNCAFE"></h2>
+    <div class="footer">
+        <div class="footer_logo"><img src="images/design_cafe_logo_footer@2x.png" alt="DESIGNCAFE"></div>
         <ul>
             <li>OPEN 18:00 / CLOSE 24:00</li>
             <li>〒150-0022</li>

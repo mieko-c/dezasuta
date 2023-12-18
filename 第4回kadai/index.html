@@ -14,7 +14,12 @@
 
     <header id="header">
         <div class="header_slider">
-            <div><img src="images/pc_first-100.jpg" alt="店内の様子"></div>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
         </div>
 
         <div class="header_wrap">
@@ -45,7 +50,8 @@
     <div class="lead">
         <p class="lead_medium">Have a happy day From a cup of coffee.</p>
         <p class="lead_large">ハッピーに溢れる１日を<br>１杯のコーヒーから。</p>
-        <p class="lead_small">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+        <p class="lead_small">毎日を丁寧に大切に過ごしたい。<br class="sp_only">
+            だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br class="sp_only">こだわりのコーヒーを提供したい。</p>
     </div>
 
     <!-- ABOUT US -->
@@ -53,9 +59,10 @@
         <div class="about_img"><img src="images/pc_about-100.jpg" alt="コーヒーで乾杯"></div>
         <div class="text">
             <h2><img src="images/about_us@2x.png" alt="ABOUT US"></h2>
+            <p class="sp_only_img"><img src="images/about_us@2x-100.jpg" alt="コーヒーで乾杯sp"></p>
             <p class="large_2">私たちが提供する<br>こだわりのコーヒー</p>
             <p class="small_2">
-                サービスを提供する上での想いや心がけていることなど、メッ<br>セージを文章で紹介します。サービスを提供する上での想い<br>や心がけていることなど、メッセージを文章で紹介します。サー<br>ビスを提供する上での想いや心がけていることなど、メッセー<br>ジを文章で紹介します。サービスを提供する上での想いや心<br>がけていることなど、メッセージを文章で紹介します。サービス<br>を提供する上での想いや心がけていることなど、メッセージを<br>文章で紹介します。
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
             </p>
         </div>
     </div>
@@ -83,11 +90,11 @@
     <section id="gal" class="gallery">
         <h2><img src="images/gallery@2x.png" alt="GALLERY"></h2>
         <ul>
-            <li><img src="images/pc_gallary_05-100.jpg" alt="店内の様子1"></li>
-            <li><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
+            <li class="pc_only"><img src="images/pc_gallary_05-100.jpg" alt="店内の様子1"></li>
+            <li class="pc_only"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
             <li><img src="images/pc_gallary_03-100.jpg" alt="店内の様子2"></li>
-            <li><img src="images/pc_gallary_02-100.jpg" alt="看板"></li>
-            <li><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></li>
+            <li class="pc_only"><img src="images/pc_gallary_02-100.jpg" alt="看板"></li>
+            <li class="pc_only"><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></li>
         </ul>
     </section>
 
@@ -96,9 +103,13 @@
         <h2><img src="images/event@2x.png" alt="EVENT"></h2>
         <div class="event_block">
             <ul>
-                <li><time datetime="2020-06-23">2020.06.23</time><u>7月はイベント出店のため0/0お休みします</u></li>
-                <li><time datetime="2020-03-15">2020.03.15</time><u>春の新商品新発売。話題のあのブランドとコラボ</u></li>
-                <li><time datetime="2020-02-06">2020.02.06</time><u>コーヒーの日で30％OFFイベントを開催［3日間限定］</u></li>
+                <li><time datetime="2020-06-23">2020.06.23<br class="event_sp_only"></time><u>7月はイベント出店のため0/0お休みします</u>
+                </li>
+                <li><time datetime="2020-03-15">2020.03.15<br class="event_sp_only"></time><u>春の新商品新発売。話題のあのブランドとコラボ</u>
+                </li>
+                <li><time datetime="2020-02-06">2020.02.06<br
+                            class="event_sp_only"></time><u>コーヒーの日で30％OFFイベントを開催［3日間限定］</u>
+                </li>
             </ul>
         </div>
     </section>

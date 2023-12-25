@@ -189,8 +189,41 @@ section h2 {
     color: #fff;
     font-size: 14px;
 }
-.slick-dotted.slick-slider {
+.slick-dotted .slick-slider {
     margin-bottom: 0;
+}
+
+/* gallery右矢印調整 */
+.slick-next {
+    right: 333px;
+}
+.slick-next:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: rotate(45deg);
+}
+/* gallery左矢印調整 */
+.slick-prev {
+    left: 333px;
+    z-index: 1;
+}
+.slick-prev:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+    transform: rotate(-45deg);
+}
+
+/* lightbox */
+.lb-data .lb-number {
+    display: none !important;
 }
 
 /* キャッチコピー */
@@ -314,7 +347,7 @@ section h2 {
 .gallery h2 img {
     padding-bottom: 15px;
     padding-top: 94px;
-    width: 25%;
+    width: 16%;
 }
 
 /* EVENT */
@@ -323,7 +356,7 @@ section h2 {
     max-width: 1000px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 68px;
+    padding-bottom: 50px;
 }
 .event h2 img {
     padding-top: 60px;
@@ -335,8 +368,8 @@ section h2 {
     justify-content: center;
     background-color: #ffffff;
     border: solid 3.6843px #4f260b;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 27px;
+    padding-bottom: 27px;
 }
 .event ul li {
     font-size: 23px;
@@ -357,7 +390,7 @@ section h2 {
 .access_map h2 img {
     padding-top: 37px;
     padding-bottom: 37px;
-    width: 21%;
+    width: 14%;
 }
 .access_map iframe {
     display: block;
@@ -524,17 +557,17 @@ section h2 {
     .menu ul li:last-child {
         padding-bottom: 0px;
     }
-    .gallery ul {
+    /* .gallery ul {
         display: block;
-    }
+    } */
     .gallery h2 img {
         padding-bottom: 20px;
         padding-top: 90px;
         width: 37%;
     }
-    .pc_only {
+    /* .pc_only {
         display: none;
-    }
+    } */
     .event {
         padding-left: 5.3%;
         padding-right: 5.3%;
@@ -605,5 +638,33 @@ section h2 {
     }
     .copyright {
         padding-bottom: 33px;
+    }
+
+    /* gallery右矢印調整 */
+    .slick-next {
+        right: 40px;
+    }
+    .slick-next:before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-top: 4px solid #fff;
+        border-right: 4px solid #fff;
+        transform: rotate(45deg);
+    }
+    /* gallery左矢印調整 */
+    .slick-prev {
+        left: 40px;
+        z-index: 1;
+    }
+    .slick-prev:before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-top: 4px solid #fff;
+        border-left: 4px solid #fff;
+        transform: rotate(-45deg);
     }
 }

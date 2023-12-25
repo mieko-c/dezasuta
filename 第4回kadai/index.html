@@ -10,12 +10,14 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
-
     <header id="header">
         <div class="header_slider">
             <div>
@@ -99,12 +101,19 @@
     <!-- GALLERY -->
     <section id="gal" class="gallery">
         <h2><img src="images/gallery@2x.png" alt="GALLERY"></h2>
-        <ul>
-            <li class="pc_only"><img src="images/pc_gallary_05-100.jpg" alt="店内の様子1"></li>
-            <li class="pc_only"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
-            <li><img src="images/pc_gallary_03-100.jpg" alt="店内の様子2"></li>
-            <li class="pc_only"><img src="images/pc_gallary_02-100.jpg" alt="看板"></li>
-            <li class="pc_only"><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></li>
+        <ul class="gallery_slider">
+            <li class="pc_only"><a href="images/pc_gallary_04-100.jpg" data-lightbox="album" data-title="ギャラリー１"><img
+                        src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a></li>
+            <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="album" data-title="ギャラリー２"><img
+                        src="images/pc_gallary_03-100.jpg" alt="店内の様子2"></a></li>
+            <li class="pc_only"><a href="images/pc_gallary_02-100.jpg" data-lightbox="album" data-title="ギャラリー３"><img
+                        src="images/pc_gallary_02-100.jpg" alt="看板"></a></li>
+            <li class="pc_only"><a href="images/pc_gallary_01-100.jpg" data-lightbox="album" data-title="ギャラリー４"><img
+                        src="images/pc_gallary_01-100.jpg" alt="ラテアート"></a></li>
+            <li class="pc_only"><a href="images/pc_gallary_01-100.jpg" data-lightbox="album" data-title="ギャラリー５"><img
+                        src="images/pc_gallary_01-100.jpg" alt="ラテアート"></a></li>
+            <li class="pc_only"><a href="images/pc_gallary_05-100.jpg" data-lightbox="album" data-title="ギャラリー６"><img
+                        src="images/pc_gallary_05-100.jpg" alt="店内の様子1"></a></li>
         </ul>
     </section>
 
@@ -167,9 +176,28 @@
                 dots: true,
                 arrows: false,
             });
+
+            $('.gallery_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
         });
     </script>
-
+    <script>
+        lightbox.option({
+            'alwaysShowNavOnTouchDevices': true,
+        })
+    </script>
 </body>
 
 </html>

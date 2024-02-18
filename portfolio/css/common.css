@@ -9,6 +9,7 @@ body,
 h1,
 h2,
 h3,
+h4,
 p,
 dl,
 dt,
@@ -24,94 +25,21 @@ li {
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
+:root {
+    --main-bg-color: #8e53a7;
+}
+
 a {
     /*下線を消す*/
     text-decoration: none;
     /*色を消す*/
     color: inherit;
-}
-
-.pagetop-logo_first a {
-    font-family: "scotch-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 20px;
-    transform: scaleX(0.94);
-    position: absolute;
-    top: 38px;
-    left: 13%;
-}
-
-.pagetop-logo_second a {
-    font-family: "scotch-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 20px;
-    transform: scaleX(0.94);
-    position: absolute;
-    top: 52px;
-    left: 13%;
-}
-
-.pc_nav ul {
-    display: flex;
-    justify-content: right;
-    padding: 55px 13% 0 67%;
-}
-
-.pc_nav ul li {
-    margin-left: 38px;
-}
-
-.pc_nav a {
-    font-family: "scotch-display", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 16px;
     transition: 0.3s;
 }
 
-.pc_nav a:hover {
-    color: var(--main-bg-color);
-}
-
-.first-title {
-    font-family: "scotch-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 12.5vw;
-    transform: scaleX(0.94);
-    position: absolute;
-    top: 121px;
-}
-
-.second-title {
-    font-family: "scotch-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 12.5vw;
-    transform: scaleX(0.94);
-    position: absolute;
-    top: 247px;
-}
-
-/* -------ここから下はデザインカフェのコピペ------- */
-h1 {
-    font-family: "scotch-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 180px;
-}
-
-ul {
-    /*左の「・」を消す*/
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: bottom;
-    border: none;
+a:hover {
+    /* color: var(--main-bg-color); */
+    opacity: 0.5;
 }
 
 /* リセットcssでbody内の背景色を指定 */
@@ -119,97 +47,52 @@ body {
     background-color: #f3f5fa;
 }
 
-footer {
+/* footer {
+    アクセントカラーに変化する
     background-color: white;
+} */
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
 }
 
-.wrap {
-    display: flex;
-    justify-content: space-between;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.wrap div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 31.25%;
-    height: 300px;
-    margin-bottom: 20px;
-    background-color: blue;
-    color: cyan;
-}
-
-.wrap2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.wrap2 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 31.25%;
-    height: 300px;
-    margin-bottom: 20px;
-    background-color: red;
-    color: pink;
-}
-
-.wrap3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.wrap3 ul {
-    display: flex;
-}
-
-.wrap3 ul li {
-    padding: 0 15px;
-    border-right: solid 1px black;
-}
-
-.wrap3 ul li:last-child {
-    border-right: none;
-}
-
-.wrap3 h1 {
-    padding: 0 50px;
-}
-
-@media screen and (max-width: 767px) {
-    .wrap {
-        display: block;
-    }
-    .wrap2 {
-        display: block;
-    }
-    .wrap3 {
-        display: block;
-    }
-    .wrap3 ul {
-        display: block;
-    }
-    .wrap div {
-        width: 100%;
-    }
-    .wrap2 div {
-        width: 100%;
-    }
-    .wrap3 ul li {
-        border-bottom: solid 1px black;
-        border-right: none;
-    }
-    .wrap3 h1 {
-        padding: 0 15px;
-    }
-}
 /* CSSリセットここまで */
+
+.header_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 13% 0 13%;
+}
+
+.pagetop-logo {
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    transform: scaleX(0.94);
+    line-height: 0.7;
+}
+
+.pc_nav ul {
+    display: flex;
+    justify-content: right;
+}
+
+.pc_nav ul li {
+    margin-left: 38px;
+    transition: 0.3s;
+}
+
+.pc_nav a {
+    font-family: "scotch-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}

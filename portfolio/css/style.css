@@ -1,0 +1,171 @@
+.title {
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12.5vw;
+    transform: scaleX(0.94);
+    position: absolute;
+    top: 121px;
+    line-height: 0.7;
+}
+
+/* scrolldown全体の場所 */
+.scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 8.1%;
+    top: 418px;
+    /*全体の高さ*/
+    height: 321px;
+}
+
+/*scrollテキストの描写*/
+.scrolldown p {
+    border-top: solid 1px var(--main-bg-color);
+    padding-top: 13px;
+    color: var(--main-bg-color);
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    position: absolute;
+    left: 9.8%;
+    top: 13px;
+    writing-mode: vertical-rl;
+    margin-left: 19px;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+    content: "";
+    /* 描画位置*/
+    position: absolute;
+    top: 123px;
+    /* 線の形状 */
+    width: 1px;
+    height: 321px;
+    background: var(--main-bg-color);
+    /* 線の動き何秒かけて動く。永遠にループ */
+    animation: pathmove 2.2s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* 高さ・位置・透過が変化して線が上から下に動く */
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 193px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 321px;
+        opacity: 0;
+    }
+}
+
+/* about */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 835px 0 197px 0;
+    width: 100%;
+    max-width: 1366px;
+    padding-left: 5.8%;
+}
+
+.square {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50px;
+    background-color: var(--main-bg-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_title {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 7.3vw;
+    font-family: "scotch-display", sans-serif;
+    color: #ffffff;
+}
+
+.about_second-title {
+    font-family: "shippori-mincho", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7vw;
+    color: #ffffff;
+}
+
+.text {
+    padding-left: 5.8%;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-weight: medium;
+    width: 50%;
+}
+
+.text h3 {
+    font-size: 24px;
+    padding-bottom: 27px;
+    color: var(--main-bg-color);
+}
+
+.text h4 {
+    font-size: 24px;
+    padding: 47px 0 27px 0;
+    color: var(--main-bg-color);
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* family */
+.family {
+    max-width: 100%;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.family_title {
+    color: #f3f5fa;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48vw;
+    overflow: hidden;
+    position: absolute;
+    top: 26%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.family_photo {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    /* position: relative;
+    align-items: center; */
+}
+
+.family li img {
+    padding-bottom: 458px;
+    max-width: 100%;
+}

@@ -23,10 +23,11 @@ li {
     color: #26130e;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-feature-settings: "palt";
 }
 
 :root {
-    --main-bg-color: #8e53a7;
+    --accent-color: #8e53a7;
 }
 
 a {
@@ -37,14 +38,21 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
-    /* color: var(--main-bg-color); */
-    opacity: 0.5;
+.pc_nav a:hover {
+    color: var(--accent-color);
+    /* opacity: 0.5; */
+}
+
+.footer a:hover {
+    color: #26130e;
+    /* opacity: 0.5; */
 }
 
 /* リセットcssでbody内の背景色を指定 */
 body {
     background-color: #f3f5fa;
+    overflow-x: hidden;
+    /* height: 200vh; */
 }
 
 /* footer {
@@ -57,6 +65,11 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
 /* CSSリセットここまで */
 
 .header_wrap {
@@ -95,4 +108,129 @@ ul {
     font-weight: 500;
     font-style: normal;
     font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--accent-color);
+    max-width: 1366px;
+}
+
+.wave {
+    position: relative;
+    height: 200px; /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+    margin-top: 459px;
+}
+
+canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.footer ul li {
+    color: #ffffff;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    border-right: solid 1px #ffffff;
+    padding: 0 18px;
+    margin-top: 194px;
+    margin-bottom: 83px;
+    transition: 0.3s;
+}
+
+.footer ul li:last-child {
+    border-right: none;
+}
+
+.copyright {
+    color: #ffffff;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 11px;
+    padding-bottom: 96px;
+    text-align: center;
+}
+
+.footer h2 {
+    color: #ffffff;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 7.3vw;
+    transform: scaleX(0.97);
+    white-space: nowrap; /* テキストを折り返さないように設定 */
+    overflow-wrap: normal; /* テキストがボックスの境界を超える場合は折り返さないように設定 */
+    position: absolute;
+    top: 4625px;
+    right: -16px;
+    line-height: 0;
+}
+
+.mailicon-pc_only {
+    position: fixed;
+    bottom: 214px;
+    right: 952px;
+    width: 106px;
+}
+
+.pc_relative-container {
+    position: relative;
+}
+
+.mailicon_circle_pc {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: rotate-anime 20s linear infinite;
+}
+@keyframes rotate-anime {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mailicon_pc {
+    position: absolute;
+    top: 43px;
+    left: 40px;
+    width: 26px;
+}
+
+.mailicon_hover-pc_only {
+    position: fixed;
+    bottom: 447px;
+    right: 952px;
+    width: 106px;
+}
+
+.hover-pc_relative-container {
+    position: relative;
+}
+
+.mailicon_circle_change_pc {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: rotate-anime 20s linear infinite;
+}
+
+.mailicon_change_pc {
+    position: absolute;
+    top: 41px;
+    left: 39px;
+    width: 31px;
 }

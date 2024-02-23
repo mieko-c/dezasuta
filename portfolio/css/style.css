@@ -1,4 +1,4 @@
-.title {
+h1 {
     font-family: "scotch-display", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -7,6 +7,8 @@
     position: absolute;
     top: 121px;
     line-height: 0.7;
+    white-space: nowrap; /* テキストを折り返さないように設定 */
+    overflow-wrap: normal; /* テキストがボックスの境界を超える場合は折り返さないように設定 */
 }
 
 /* scrolldown全体の場所 */
@@ -21,9 +23,9 @@
 
 /*scrollテキストの描写*/
 .scrolldown p {
-    border-top: solid 1px var(--main-bg-color);
+    border-top: solid 1px var(--accent-color);
     padding-top: 13px;
-    color: var(--main-bg-color);
+    color: var(--accent-color);
     font-family: "scotch-display", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -44,7 +46,7 @@
     /* 線の形状 */
     width: 1px;
     height: 321px;
-    background: var(--main-bg-color);
+    background: var(--accent-color);
     /* 線の動き何秒かけて動く。永遠にループ */
     animation: pathmove 2.2s ease-in-out infinite;
     opacity: 0;
@@ -64,68 +66,108 @@
     100% {
         height: 0;
         top: 321px;
-        opacity: 0;
+        opacity: 1;
     }
 }
 
 /* about */
 .about {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 835px 0 197px 0;
     width: 100%;
-    max-width: 1366px;
     padding-left: 5.8%;
+    position: relative;
 }
 
+/* .square {
+    /* position: relative; */
+/* width: 50vw; */
+/* height: 50vw; */
+/* border-radius: 50px; */
+/* background-color: var(--accent-color); */
+/* text-align: center; */
+/* display: flex; */
+/* flex-direction: column; */
+/* justify-content: center; */
+/* align-items: center; */
+/* transition: 10s; */
+/* } */
 .square {
-    position: relative;
+    /* position: relative; */
     width: 50vw;
     height: 50vw;
     border-radius: 50px;
-    background-color: var(--main-bg-color);
+    background-color: var(--accent-color);
+    transition: 5s;
+}
+.square.is-active {
+    border-radius: 99rem;
+    transform: rotate(-90deg);
+}
+
+.about_heading {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 60%;
 }
 
-.about_title {
+/* .square h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 7.3vw;
     font-family: "scotch-display", sans-serif;
     color: #ffffff;
+    transform: rotate(none);
+} */
+.about_heading h2 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 7.3vw;
+    font-family: "scotch-display", sans-serif;
+    color: #ffffff;
+    transform: rotate(none);
 }
-
-.about_second-title {
+.about_heading h3 {
     font-family: "shippori-mincho", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.7vw;
     color: #ffffff;
+    rotate: none;
 }
+/* .square h3 {
+    font-family: "shippori-mincho", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7vw;
+    color: #ffffff;
+    rotate: none;
+} */
 
 .text {
     padding-left: 5.8%;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    font-weight: medium;
     width: 50%;
+    box-sizing: border-box;
+}
+
+.text h2 {
+    font-size: 24px;
+    padding-bottom: 27px;
+    color: var(--accent-color);
 }
 
 .text h3 {
     font-size: 24px;
-    padding-bottom: 27px;
-    color: var(--main-bg-color);
-}
-
-.text h4 {
-    font-size: 24px;
     padding: 47px 0 27px 0;
-    color: var(--main-bg-color);
+    color: var(--accent-color);
 }
 
 .text p {
@@ -135,19 +177,20 @@
 
 /* family */
 .family {
-    max-width: 100%;
+    max-width: 1366px;
     position: relative;
     /* display: flex;
     justify-content: center;
     align-items: center; */
 }
 
-.family_title {
+.family h2 {
     color: #f3f5fa;
     font-family: "scotch-display", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 48vw;
+    transform: scaleX(0.72);
     overflow: hidden;
     position: absolute;
     top: 26%;
@@ -168,4 +211,120 @@
 .family li img {
     padding-bottom: 458px;
     max-width: 100%;
+}
+
+.works_title {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 103px;
+}
+
+.works_title h2 {
+    color: var(--accent-color);
+    font-family: "shippori-mincho", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    writing-mode: vertical-lr; /* 縦方向に配置 */
+}
+
+.works_title h3 {
+    color: var(--accent-color);
+    font-family: "scotch-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 100px;
+    text-orientation: sideways; /* テキストの向きを指定 */
+    writing-mode: vertical-lr; /* 縦方向に配置 */
+}
+
+.works ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* overflow: hidden; 表示領域外のコンテンツを非表示にする */
+    margin-left: 2.4%;
+    /* margin-right: 2.4%; */
+    max-width: 1366px;
+}
+
+.works ul li {
+    margin-right: 34px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .works ul li:last-child {
+    margin-right: none;
+} */
+
+.works img {
+    border-radius: 9.7%;
+    transition: 1s all;
+}
+
+.works img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s all;
+    border-radius: 9.7%;
+}
+
+/* works右矢印調整 */
+.slick-next {
+    /* right: -77px; */
+    width: 12rem;
+    height: 12rem;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    /* transform: translateX(50%); */
+    transform: translate(60px, -88px);
+}
+.slick-next:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+/* works左矢印調整 */
+.slick-prev {
+    /* left: 77px; */
+    z-index: 1;
+    width: 12rem;
+    height: 12rem;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    /* transform: translateX(50%); */
+    transform: translate(-88px, -88px);
+}
+.slick-prev:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.viewbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: #ffffff;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+    height: 80px;
+    width: 80px;
 }

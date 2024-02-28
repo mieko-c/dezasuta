@@ -27,6 +27,12 @@
     align-items: center;
 }
 
+/* モーダルCSS */
+.works4_modal {
+    display: none;
+}
+/* ------------------------------ */
+
 .works4_pc {
     width: 50%;
 }

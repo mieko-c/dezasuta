@@ -29,52 +29,7 @@ $(function(){
 });
 //--------------------------------------------------
 
-// カウントアップの処理------------------------------
-let countup = 0; // カウントアップの初期値
 
-function updateCountup() {
-  const countupElement = document.getElementById('countup');
-  countupElement.textContent = countup;
-
-  if (countup === 100) {
-    // カウントアップが終了したら何らかの処理を実行する
-    console.log('Loading complete!');
-  } else {
-    countup++;
-    setTimeout(updateCountup, 10); // 0.1秒ごとにカウントアップを更新
-  }
-}
-
-// カウントアップ開始
-updateCountup();
-
-// ローディング-------------------------------------- 
-jQuery(function () {
-  var webStorage = function () {
-    if (sessionStorage.getItem('access')) {
-      //2回目以降アクセス時の処理
-      console.log('2回目以降のアクセスです');
-      $(".loading").addClass('is-active');
-      
-    } else {
-      //初回アクセス時の処理
-      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
-      $(".loading").addClass('is-active'); // loadingアニメーションを表示
-      setTimeout(function () {
-        // ローディングを数秒後に非表示にする
-       $(".loading").addClass('is-active');
-      $(".loading").removeClass('is-active');
-     }, 3000); // ローディングを表示する時間
-  }
-  }
-  webStorage();
- 
-});
-
-function hideLoadingScreen() {
-  const loadingContainer = document.querySelector('.loading-container');
-  loadingContainer.style.display = 'none';
-}
 
 //aboutのオブジェクト変化----------------------------
 // スクロール時に実行する関数を定義
@@ -277,3 +232,83 @@ var mailiconPc = document.getElementById('mailiconPc');
     this.style.backgroundImage = '.pc_relative-container .img'; // 初期の画像のパス
   });
   //-------------------------------------------------
+
+
+
+  // カウントアップの処理------------------------------
+let countup = 0; // カウントアップの初期値
+
+function updateCountup() {
+  const countupElement = document.getElementById('countup');
+  countupElement.textContent = countup;
+
+  if (countup === 100) {
+    // カウントアップが終了したら何らかの処理を実行する
+    console.log('Loading complete!');
+  } else {
+    countup++;
+    setTimeout(updateCountup, 10); // 0.1秒ごとにカウントアップを更新
+  }
+}
+
+// カウントアップ開始
+updateCountup();
+
+// ローディング-------------------------------------- 
+jQuery(function () {
+  var webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      //2回目以降アクセス時の処理
+      console.log('2回目以降のアクセスです');
+      $(".loading").addClass('is-active');
+      
+    } else {
+      //初回アクセス時の処理
+      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+      $(".loading").addClass('is-active'); // loadingアニメーションを表示
+      setTimeout(function () {
+        // ローディングを数秒後に非表示にする
+       $(".loading").addClass('is-active');
+      $(".loading").removeClass('is-active');
+     }, 3000); // ローディングを表示する時間
+  }
+  }
+  webStorage();
+ 
+});
+
+function hideLoadingScreen() {
+  const loadingContainer = document.querySelector('.loading-container');
+  loadingContainer.style.display = 'none';
+}
+
+//モーダル
+$(".modal_gallery").modaal({
+  type: 'image',
+  overlay_close:true,//モーダル背景クリック時に閉じるか
+  before_open:function(){// モーダルが開く前に行う動作
+    $('#works4_modal').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
+  },
+  after_close:function(){// モーダルが閉じた後に行う動作
+    $('#works4_modal').css('overflow-y','scroll');/*縦スクロールバーを出す*/
+  }
+});
+// -------------------------------------------
+
+
+//modal viweボタン-----------------------------------
+$(function(){
+  $(document).on({
+    'mouseenter': function () {
+      $('.modal_viewButton').addClass('is-active');
+      document.addEventListener('mousemove', function (e) {
+        $('.modal_viewButton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
+      });
+    },
+  
+    'mouseleave': function () {
+      $('.modal_viewButton').removeClass('is-active');      
+    }
+  
+  }, '.works_img');
+});

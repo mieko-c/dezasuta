@@ -9,6 +9,73 @@
   })(document);
 //--------------------------------------------------
 
+// accent-color変化---------------------------------
+const root = document.querySelector(':root');
+
+  // 選択可能な色の配列
+  var colors = ['#a7536c', '#418266', '#5373a7', '#8e53a7'];
+
+  // ランダムな色を選択
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  
+  root.style.setProperty("--accent-color", randomColor);
+
+$(function(){
+   
+  $('.btn').on('click', function(){
+    $('.object').toggleClass('is-active');
+  });
+  
+});
+//--------------------------------------------------
+
+// カウントアップの処理------------------------------
+let countup = 0; // カウントアップの初期値
+
+function updateCountup() {
+  const countupElement = document.getElementById('countup');
+  countupElement.textContent = countup;
+
+  if (countup === 100) {
+    // カウントアップが終了したら何らかの処理を実行する
+    console.log('Loading complete!');
+  } else {
+    countup++;
+    setTimeout(updateCountup, 10); // 0.1秒ごとにカウントアップを更新
+  }
+}
+
+// カウントアップ開始
+updateCountup();
+
+// ローディング-------------------------------------- 
+jQuery(function () {
+  var webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      //2回目以降アクセス時の処理
+      console.log('2回目以降のアクセスです');
+      $(".loading").addClass('is-active');
+      
+    } else {
+      //初回アクセス時の処理
+      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+      $(".loading").addClass('is-active'); // loadingアニメーションを表示
+      setTimeout(function () {
+        // ローディングを数秒後に非表示にする
+       $(".loading").addClass('is-active');
+      $(".loading").removeClass('is-active');
+     }, 3000); // ローディングを表示する時間
+  }
+  }
+  webStorage();
+ 
+});
+
+function hideLoadingScreen() {
+  const loadingContainer = document.querySelector('.loading-container');
+  loadingContainer.style.display = 'none';
+}
+
 //aboutのオブジェクト変化----------------------------
 // スクロール時に実行する関数を定義
 function handleScroll() {
@@ -79,7 +146,7 @@ function draw(canvas, color) {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
   //波を描画 drawWave(canvas, color[数字（波の数を0から数えて指定）], 透過, 波の幅のzoom,波の開始位置の遅れ )
-  drawWave(canvas, color[0], 1, 3, 0);//drawWave(canvas, color[0],0.5, 3, 0);とすると透過50%の波が出来る
+  drawWave(canvas, randomColor, 1, 3, 0);//drawWave(canvas, color[0],0.5, 3, 0);とすると透過50%の波が出来る
 }
 /**
 * 波を描画
@@ -134,8 +201,8 @@ $(function () {
       speed: 1500,
       slidesToShow: 3,
       slidesToScroll: 1,
-      // autoplay: true,
-      autoplaySpeed: 2000
+      autoplay: true,
+      autoplaySpeed: 1000
   });
 })
 
@@ -159,41 +226,41 @@ $(function () {
 //--------------------------------------------------
 
 //works viweボタン-----------------------------------
-// 画像要素を取得
-var viewButton = document.getElementById('viewButton');
-
-// マウスが画像に入ったときの処理
-viewButton.addEventListener('mouseenter', function() {
-  // カーソルを変更
-  viewButton.style.cursor = '.viewbutton'; // 例: ポインター型のカーソル
-});
-
-// マウスが画像から出たときの処理
-viewButton.addEventListener('mouseleave', function() {
-  // カーソルをデフォルトに戻す
-  viewButton.style.cursor = 'auto';
-});
-//--------------------------------------------------
-
-// accent-color変化---------------------------------
 $(function(){
+  $(document).on({
+    'mouseenter': function () {
+      $('.viewbutton').addClass('is-active');
+      document.addEventListener('mousemove', function (e) {
+        $('.viewbutton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
+      });
+    },
   
-  const root = document.querySelector(':root');
-
-  // 選択可能な色の配列
-  var colors = ['#a7536c', '#418266', '#5373a7', '#8e53a7'];
-
-  // ランダムな色を選択
-  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    'mouseleave': function () {
+      $('.viewbutton').removeClass('is-active');      
+    }
   
-  root.style.setProperty("--accent-color", randomColor);
-  
-  $('.btn').on('click', function(){
-    $('.object').toggleClass('is-active');
-  });
-  
+  }, '.slick-slide');
 });
+
+// $(function(){
+//   $(document).on({
+//     'mouseenter': function () {
+//       $('.slick-slide').css('cursor', 'none'); カーソルを非表示にする
+//       $('.viewbutton').addClass('is-active');
+//       document.addEventListener('mousemove', function (e) {
+//         $('.viewbutton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
+//       });
+//     },
+  
+//     'mouseleave': function () {
+//       $('.slick-slide').css('cursor', 'auto'); マウスが離れたら通常のカーソルに戻す
+//       $('.viewbutton').removeClass('is-active');      
+//     }
+//   }, '.slick-slide');
+// });
 //--------------------------------------------------
+
+
 
 //mailicon------------------------------------------
 var mailiconPc = document.getElementById('mailiconPc');

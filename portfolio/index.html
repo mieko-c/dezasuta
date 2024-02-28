@@ -11,34 +11,44 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/5-10.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
+    <!-- <div class="loading">
+        <div class="loading_logo"><img src="images/load_logo_pc.svg" alt="load_logo_pc"></div>
+        <div class="loading_text">
+            <p class=".change_color" id="countup">000</p>
+            <h1>welcome to my portfolio</h1>
+        </div>
+    </div> -->
+
     <header>
         <div class="header_wrap">
             <!-- pagetop-logo -->
+            <!-- <a class="pagetop-logo" href="/index.html">MIEKO CHIBANA<br>PORTFOLIO</a> -->
             <a class="pagetop-logo" href="/index.html">MIEKO CHIBANA<br>PORTFOLIO</a>
             <!-- global-menu -->
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">WORKS</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="/contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <section id="header" class="fv">
+        <!-- title -->
+        <h1>MIEKO CHIBANA<br>PORTFOLIO</h1>
+        <!-- scroll -->
+        <div class="scrolldown">
+            <p>SCROLL</p>
+        </div>
+    </section>
 
-    <!-- title -->
-    <h1>MIEKO CHIBANA<br>PORTFOLIO</h1>
-    <!-- scroll -->
-    <div class="scrolldown">
-        <p>SCROLL</p>
-    </div>
-    <section id="abo" class="about">
+    <section id="about" class="about">
         <!-- <div class="square" id="square_transform">
             <h2>ABOUT</h2>
             <h3>私について</h3>
@@ -48,7 +58,7 @@
             <h2>ABOUT</h2>
             <h3>私について</h3>
         </div>
-        <div class="text">
+        <div class="about_text">
             <h2>MIEKO CHIBANA</h2>
             <p>はじめまして。<br><br>私は１歳と５歳の子を育てる２児の母です。<br>２２年間食品会社の工場で正社員として働いてきました。<br><br>
                 特に没頭した仕事は表示物や標準作業書の作成です。<br>自分が作った物が誰かの役に立つことにやりがいや喜びを<br>感じました。<br><br>
@@ -61,15 +71,18 @@
         </div>
     </section>
     <section class="family">
-        <h2>FAMILY</h2>
         <ul class="family_photo">
             <li><img src="images/photo1.jpg" alt="photo1"></li>
             <li><img src="images/photo2.jpg" alt="photo2"></li>
             <li><img src="images/photo3.jpg" alt="photo3"></li>
             <li><img src="images/photo4.jpg" alt="photo4"></li>
         </ul>
+        <h1 class="family_heading">
+            <span>FAMILY</span>
+            <span>FAMILY</span>
+        </h1>
     </section>
-    <section class="works">
+    <section id="works" class="works">
         <div class="works_title">
             <h2>制作物</h2>
             <h3>WORKS</h3>
@@ -89,37 +102,54 @@
         <canvas id="waveCanvas"></canvas>
     </div>
     <footer>
-        <div id="mailiconPc" class="mailicon-pc_only">
-            <div class="pc_relative-container">
-                <a href="">
-                    <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
-                    <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
-                </a>
-            </div>
-        </div>
-        <div class="mailicon_hover-pc_only">
-            <div class="hover-pc_relative-container">
-                <!-- 質問箇所ここです。 -->
-                <a href="">
-                    <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ"
-                        class="mailicon_circle_change_pc">
-                    <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
-                </a>
-            </div>
-        </div>
-
+        <a href="" id="mailiconPc" class="mailicon-pc_only">
+            <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
+            <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
+        </a>
+        <a href=" " class="mailicon_hover-pc_only">
+            <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
+            <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
+        </a>
         <div class="footer">
             <ul>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">WORKS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="/contact.html">CONTACT</a></li>
             </ul>
             <p class="copyright">MIEKO CHIBANA © 2024</p>
             <h2>MIEKO CHIBANA PORTFOLIO</h2>
         </div>
     </footer>
     <script src="js/script.js"></script>
-    <!-- <script src="js/5-10.js"></script> -->
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav Li').on('click', function () {
+                //ここの中に記述
+                $(".sp_nav").fadeToggle();
+                $(".sp_btn").toggleClass("open");
+            });
+
+            //     $('.works_slider').slick({
+            //         autoplay: true,
+            //         autoplaySpeed: 2000,
+            //         slidesToShow: 3,
+            //         slidesToScroll: 1,
+            //         responsive: [
+            //             {
+            //                 breakpoint: 768,
+            //                 settings: {
+            //                     slidesToShow: 1,
+            //                 }
+            //             }
+            //         ]
+            //     });
+        });
+    </script>
+    <script>
+        lightbox.option({
+            'alwaysShowNavOnTouchDevices': true,
+        })
+    </script>
 </body>
 
 </html>

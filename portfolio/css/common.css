@@ -43,6 +43,10 @@ a {
     /* opacity: 0.5; */
 }
 
+.header_wrap a:hover {
+    color: var(--accent-color);
+}
+
 .footer a:hover {
     color: #26130e;
     /* opacity: 0.5; */
@@ -72,6 +76,79 @@ img {
 }
 /* CSSリセットここまで */
 
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* margin: 0; */
+    background-color: #e6dccc;
+    /* text-align: center; */
+    /* flex-direction: column; */
+    z-index: 9999;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading_logo {
+    width: 40%;
+}
+
+.loading_text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.loading_text h1 {
+    font-family: "scotch-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    /* margin-top: 5px; */
+}
+
+#countup {
+    font-size: 10px;
+    /* margin-top: 10px; */
+}
+
+.change_color {
+    animation: change_color 2s linear infinite;
+}
+@keyframes change_color {
+    0% {
+        color: #a7536c;
+    }
+    25% {
+        color: #418266;
+    }
+    50% {
+        color: #5373a7;
+    }
+    75% {
+        color: #8e53a7;
+    }
+    100% {
+        color: #8e53a7;
+    }
+}
+
+.loading.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* .loading_logo{
+
+}
+
+.loading_text {
+
+} */
+
 .header_wrap {
     position: fixed;
     top: 0;
@@ -82,6 +159,8 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 38px 13% 0 13%;
+    z-index: 1;
+    backdrop-filter: blur(5px);
 }
 
 .pagetop-logo {
@@ -111,9 +190,7 @@ img {
 }
 
 .footer {
-    width: 100%;
     background-color: var(--accent-color);
-    max-width: 1366px;
 }
 
 .wave {
@@ -158,7 +235,7 @@ canvas {
     font-weight: 300;
     font-style: normal;
     font-size: 11px;
-    padding-bottom: 96px;
+    padding-bottom: 24px;
     text-align: center;
 }
 
@@ -167,26 +244,26 @@ canvas {
     font-family: "scotch-display", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 7.3vw;
+    font-size: 7vw;
     transform: scaleX(0.97);
-    white-space: nowrap; /* テキストを折り返さないように設定 */
-    overflow-wrap: normal; /* テキストがボックスの境界を超える場合は折り返さないように設定 */
-    position: absolute;
-    top: 4625px;
-    right: -16px;
-    line-height: 0;
+    white-space: nowrap; /*テキストを折り返さないように設定*/
+    overflow-wrap: normal; /*テキストがボックスの境界を超える場合は折り返さないように設定*/
+    line-height: 0.7;
 }
 
 .mailicon-pc_only {
     position: fixed;
-    bottom: 214px;
-    right: 952px;
+    bottom: 100px;
+    /* right: 952px; */
+    right: 23px;
     width: 106px;
+    height: 106px;
+    /* mix-blend-mode: exclusion; */
 }
 
-.pc_relative-container {
+/* .pc_relative-container {
     position: relative;
-}
+} */
 
 .mailicon_circle_pc {
     position: absolute;
@@ -205,21 +282,25 @@ canvas {
 
 .mailicon_pc {
     position: absolute;
-    top: 43px;
-    left: 40px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     width: 26px;
 }
 
 .mailicon_hover-pc_only {
     position: fixed;
-    bottom: 447px;
-    right: 952px;
+    bottom: 260px;
+    /* right: 952px; */
+    right: 23px;
     width: 106px;
+    height: 106px;
+    /* mix-blend-mode: exclusion; */
 }
 
-.hover-pc_relative-container {
+/* .hover-pc_relative-container {
     position: relative;
-}
+} */
 
 .mailicon_circle_change_pc {
     position: absolute;
@@ -230,7 +311,98 @@ canvas {
 
 .mailicon_change_pc {
     position: absolute;
-    top: 41px;
-    left: 39px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     width: 31px;
+}
+
+/* contactページ */
+
+.contact_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact_text h1 {
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 11.7vw;
+    white-space: nowrap; /* テキストを折り返さないように設定 */
+    overflow-wrap: normal; /*テキストがボックスの境界を超える場合は折り返さないように設定 */
+    padding-top: 148px;
+}
+
+.contact_text p {
+    font-size: 21px;
+    line-height: 1.8;
+    text-align: center;
+    padding-top: 43px;
+    padding-bottom: 170px;
+}
+
+.contact_list {
+    display: grid;
+    place-content: center;
+}
+
+.contact_name_field,
+.contact_furigana_field,
+.contact_email_field,
+.contact_title_field,
+.contact_msg_field {
+    /* padding: 0 4% 0 4%; */
+    display: inline-block;
+}
+
+.contact_list p {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.contact_name_field input,
+.contact_furigana_field input,
+.contact_email_field input,
+.contact_title_field input {
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    width: 850px;
+    height: 50px;
+    border: none;
+    margin: 10px 0 57px 0;
+    padding: 25px;
+    font-size: 30px;
+}
+
+.contact_msg_field textarea {
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    width: 850px;
+    height: 450px;
+    border: none;
+    margin: 10px 0 57px 0;
+    padding: 25px;
+    font-size: 30px;
+}
+
+.contact_msg_field {
+    display: grid;
+    place-content: center;
+    display: inline-block;
+}
+
+.submit_button button {
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    width: 219px;
+    height: 99px;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    color: #ffffff;
+    border: none;
 }

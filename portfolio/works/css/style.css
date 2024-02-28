@@ -1,0 +1,208 @@
+.works_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    flex-direction: column;
+}
+
+.works_heading h1 {
+    font-family: "scotch-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 11vw;
+    padding-top: 148px;
+}
+
+.works_heading p {
+    font-size: 21px;
+    padding-top: 35px;
+    padding-bottom: 83px;
+    text-align: center;
+}
+
+.works_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works4_pc {
+    width: 50%;
+}
+
+.works4_sp {
+    width: 10.877%;
+}
+
+.works5 {
+    width: 50%;
+}
+
+/* .works_text dl {
+    display: flex;
+    font-size: 25px;
+    line-height: 1.8;
+    padding-top: 218px;
+    padding-left: 13%;
+} */
+
+.works_text dl {
+    font-size: 25px;
+    padding: 218px 0 259px 13%;
+}
+
+.works_text dt {
+    float: left;
+    line-height: 1.8;
+}
+
+.works_text dd {
+    padding-left: 306px;
+    padding-bottom: 63px;
+    line-height: 1.8;
+}
+
+/* .works {
+    padding-top: 100px;
+} */
+
+/* .works_title {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 103px;
+} */
+
+/* .works_title h2 {
+    color: var(--accent-color);
+    font-family: "shippori-mincho", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    writing-mode: vertical-lr; /* 縦方向に配置 */
+/* } */
+
+/* .works_title h3 {
+    color: var(--accent-color);
+    font-family: "scotch-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 100px;
+    text-orientation: sideways; テキストの向きを指定
+    writing-mode: vertical-lr; 縦方向に配置
+} */
+
+.works_slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* overflow: hidden; 表示領域外のコンテンツを非表示にする */
+    margin-left: 2.4%;
+    /* margin-right: 2.4%; */
+}
+
+.works_slider li {
+    margin-right: 34px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 9.7%;
+}
+
+/* .works ul li:last-child {
+    margin-right: none;
+} */
+
+.works_slider img {
+    transition: 1s all;
+}
+
+.works_slider img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s all;
+    border-radius: 9.7%;
+}
+
+/* works右矢印調整 */
+.slick-next {
+    /* right: -77px; */
+    width: 12rem;
+    height: 12rem;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(50%, -50%);
+    right: 0px;
+    /* transform: translate(60px, -88px); */
+}
+.slick-next:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    position: relative;
+    left: 10%;
+}
+/* works左矢印調整 */
+.slick-prev {
+    /* left: 77px; */
+    z-index: 1;
+    width: 12rem;
+    height: 12rem;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    left: -2.4%;
+    /* transform: translate(-88px, -88px); */
+}
+.slick-prev:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(-45deg);
+    position: relative;
+    left: 68%;
+}
+
+.slick-next:hover,
+.slick-prev:hover {
+    background: black;
+}
+
+.viewbutton {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: #ffffff;
+    font-family: "scotch-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+    height: 80px;
+    width: 80px;
+    cursor: none;
+}
+
+/* .works_slider {
+    cursor: none;
+} */
+
+.viewbutton.is-active {
+    opacity: 1;
+    cursor: none;
+}

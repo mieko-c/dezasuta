@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-/* cssリセット */
+/* リセットcss */
 
 /*利用するタグによってこちらの内容は増やす*/
-
 html,
 body,
 h1,
@@ -59,11 +58,6 @@ body {
     /* height: 200vh; */
 }
 
-/* footer {
-    アクセントカラーに変化する
-    background-color: white;
-} */
-
 ul {
     /*左の「・」を消す*/
     list-style: none;
@@ -74,7 +68,13 @@ img {
     vertical-align: bottom;
     border: none;
 }
-/* CSSリセットここまで */
+/* リセットcssここまで */
+
+/* viewボタンのカーソルマークを消す */
+.no-cursor,
+.no-cursor a {
+    cursor: none;
+}
 
 .loading {
     display: flex;
@@ -112,12 +112,13 @@ img {
 
 #countup {
     font-size: 10px;
+    animation: change_color 2s linear infinite;
     /* margin-top: 10px; */
 }
 
-.change_color {
+/* .change_color {
     animation: change_color 2s linear infinite;
-}
+} */
 @keyframes change_color {
     0% {
         color: #a7536c;
@@ -251,18 +252,28 @@ canvas {
     line-height: 0.7;
 }
 
-.mailicon-pc_only {
+.mailicon_hover-pc_only {
     position: fixed;
     bottom: 100px;
-    /* right: 952px; */
     right: 23px;
     width: 106px;
     height: 106px;
-    /* mix-blend-mode: exclusion; */
 }
 
-/* .pc_relative-container {
-    position: relative;
+/* .mailicon_pc_only {
+    position: fixed;
+    bottom: 100px;
+    right: 23px;
+    width: 106px;
+    height: 106px;
+} */
+
+/* .mailicon_hover-pc_only {
+    position: fixed;
+    bottom: 260px;
+    right: 23px;
+    width: 106px;
+    height: 106px;
 } */
 
 .mailicon_circle_pc {
@@ -291,22 +302,18 @@ canvas {
 .mailicon_hover-pc_only {
     position: fixed;
     bottom: 260px;
-    /* right: 952px; */
     right: 23px;
     width: 106px;
     height: 106px;
-    /* mix-blend-mode: exclusion; */
 }
-
-/* .hover-pc_relative-container {
-    position: relative;
-} */
 
 .mailicon_circle_change_pc {
     position: absolute;
     top: 0px;
     left: 0px;
     animation: rotate-anime 20s linear infinite;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .mailicon_change_pc {
@@ -315,6 +322,32 @@ canvas {
     top: 50%;
     left: 50%;
     width: 31px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.mailicon_hover-pc_only:hover .mailicon_circle_change_pc {
+    opacity: 1;
+}
+
+.mailicon_hover-pc_only:hover .mailicon_change_pc {
+    opacity: 1;
+}
+/* .mailicon_hover-pc_only:hover .mailicon_change_pc {
+    opacity: 1;
+} */
+.mailicon_hover-pc_only:hover .mailicon_circle_pc {
+    opacity: 0;
+}
+
+.mailicon_hover-pc_only:hover .mailicon_pc {
+    opacity: 0;
+}
+
+/* svgの塗りつぶし */
+.cls-1,
+.cls-2 {
+    fill: var(--accent-color);
 }
 
 /* contactページ */

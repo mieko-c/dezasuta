@@ -184,6 +184,7 @@ $(function () {
 $(function(){
   $(document).on({
     'mouseenter': function () {
+      $('body').addClass('no-cursor');
       $('.viewbutton').addClass('is-active');
       document.addEventListener('mousemove', function (e) {
         $('.viewbutton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
@@ -191,49 +192,12 @@ $(function(){
     },
   
     'mouseleave': function () {
+      $('body').removeClass('no-cursor');
       $('.viewbutton').removeClass('is-active');      
     }
-  
   }, '.slick-slide');
 });
-
-// $(function(){
-//   $(document).on({
-//     'mouseenter': function () {
-//       $('.slick-slide').css('cursor', 'none'); カーソルを非表示にする
-//       $('.viewbutton').addClass('is-active');
-//       document.addEventListener('mousemove', function (e) {
-//         $('.viewbutton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
-//       });
-//     },
-  
-//     'mouseleave': function () {
-//       $('.slick-slide').css('cursor', 'auto'); マウスが離れたら通常のカーソルに戻す
-//       $('.viewbutton').removeClass('is-active');      
-//     }
-//   }, '.slick-slide');
-// });
 //--------------------------------------------------
-
-
-
-//mailicon------------------------------------------
-var mailiconPc = document.getElementById('mailiconPc');
-
-  // ホバー時の処理
-  mailiconPc.addEventListener('mouseover', function() {
-    // ホバー時の画像に切り替え
-    this.style.backgroundImage = '.hover-pc_relative-container .img'; // ホバー時の画像のパス
-  });
-
-  // ホバー解除時の処理
-  mailiconPc.addEventListener('mouseout', function() {
-    // ホバー解除時に初期の画像に切り替え
-    this.style.backgroundImage = '.pc_relative-container .img'; // 初期の画像のパス
-  });
-  //-------------------------------------------------
-
-
 
   // カウントアップの処理------------------------------
 let countup = 0; // カウントアップの初期値
@@ -260,22 +224,42 @@ jQuery(function () {
     if (sessionStorage.getItem('access')) {
       //2回目以降アクセス時の処理
       console.log('2回目以降のアクセスです');
-      $(".loading").addClass('is-active');
-      
     } else {
       //初回アクセス時の処理
       sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
-      $(".loading").addClass('is-active'); // loadingアニメーションを表示
       setTimeout(function () {
         // ローディングを数秒後に非表示にする
-       $(".loading").addClass('is-active');
-      $(".loading").removeClass('is-active');
-     }, 3000); // ローディングを表示する時間
-  }
+        $(".loading").removeClass('is-active');
+      }, 3000); // ローディングを表示する時間
+    }
   }
   webStorage();
- 
 });
+
+
+
+
+// jQuery(function () {
+  // var webStorage = function () {
+    // if (sessionStorage.getItem('access')) {
+      //2回目以降アクセス時の処理
+      // console.log('2回目以降のアクセスです');
+      // $(".loading").addClass('is-active');
+      
+    // } else {
+      //初回アクセス時の処理
+      // sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+      // $(".loading").addClass('is-active'); // loadingアニメーションを表示
+      // setTimeout(function () {
+        // ローディングを数秒後に非表示にする
+      //  $(".loading").addClass('is-active');
+      // $(".loading").removeClass('is-active');
+    //  }, 3000); // ローディングを表示する時間
+  // }
+  // }
+  // webStorage();
+ 
+// });
 
 function hideLoadingScreen() {
   const loadingContainer = document.querySelector('.loading-container');

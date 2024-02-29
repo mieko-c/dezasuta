@@ -16,25 +16,25 @@
 </head>
 
 <body>
-    <!-- <div class="loading">
+    <div class="loading">
         <div class="loading_logo"><img src="images/load_logo_pc.svg" alt="load_logo_pc"></div>
         <div class="loading_text">
             <p class=".change_color" id="countup">000</p>
             <h1>welcome to my portfolio</h1>
         </div>
-    </div> -->
+    </div>
 
     <header>
         <div class="header_wrap">
             <!-- pagetop-logo -->
             <!-- <a class="pagetop-logo" href="/index.html">MIEKO CHIBANA<br>PORTFOLIO</a> -->
-            <a class="pagetop-logo" href="/index.html">MIEKO CHIBANA<br>PORTFOLIO</a>
+            <a class="pagetop-logo" href="./index.html">MIEKO CHIBANA<br>PORTFOLIO</a>
             <!-- global-menu -->
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#works">WORKS</a></li>
-                    <li><a href="/contact.html">CONTACT</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -101,20 +101,581 @@
     <div class="wave">
         <canvas id="waveCanvas"></canvas>
     </div>
+
     <footer>
-        <a href="" id="mailiconPc" class="mailicon-pc_only">
+        <a href="" id="mailicon_hover-pc_only" class="mailicon_hover-pc_only">
+            <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.5 106.5" class="mailicon_circle_pc">
+                <g id="img1">
+                    <g>
+                        <text class="cls-2" transform="translate(84.07 30.03) rotate(56.73) scale(.94 1)">
+                            <tspan x="0" y="0">G</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(86.74 34.15) rotate(63.13) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(88.41 37.51) rotate(67.68) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(89.31 39.71) rotate(70.9) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(89.94 41.53) rotate(73.7) scale(.94 1)">
+                            <tspan x="0" y="0">i</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(90.48 43.21) rotate(77.98) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(91.27 47.05) rotate(82.3) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(91.53 48.94) rotate(85.47) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(91.72 51.26) rotate(89.07) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(91.76 55.05) rotate(95.62) scale(.94 1)">
+                            <tspan x="0" y="0">u</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(91.37 58.93) rotate(101.12) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(90.72 62.36) rotate(106.66) scale(.94 1)">
+                            <tspan x="0" y="0">h</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(89.55 66.13) rotate(111.04) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(88.87 67.91) rotate(114.16) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(87.94 69.99) rotate(117.56) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(86.89 72.01) rotate(120.68) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(85.91 73.65) rotate(123.53) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(84.94 75.26) rotate(128.59) scale(.94 1)">
+                            <tspan x="0" y="0">G</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(81.84 79.1) rotate(135) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(79.18 81.73) rotate(139.49) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(77.37 83.27) rotate(142.65) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(75.85 84.43) rotate(145.4) scale(.94 1)">
+                            <tspan x="0" y="0">i</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(74.41 85.48) rotate(149.67) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(70.99 87.44) rotate(154.01) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(69.28 88.28) rotate(157.2) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(67.14 89.22) rotate(161.79) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(63.57 90.4) rotate(167.54) scale(.94 1)">
+                            <tspan x="0" y="0">u</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(59.74 91.24) rotate(173.07) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(56.29 91.68) rotate(178.51) scale(.94 1)">
+                            <tspan x="0" y="0">h</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(52.35 91.75) rotate(-177.24) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(50.42 91.66) rotate(-174.11) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(48.18 91.43) rotate(-170.77) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(45.93 91.06) rotate(-167.63) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(44.07 90.66) rotate(-164.77) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(42.23 90.23) rotate(-159.62) scale(.94 1)">
+                            <tspan x="0" y="0">G</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(37.63 88.5) rotate(-153.18) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(34.28 86.78) rotate(-148.63) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(32.25 85.54) rotate(-145.44) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(30.67 84.45) rotate(-142.69) scale(.94 1)">
+                            <tspan x="0" y="0">i</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(29.26 83.43) rotate(-138.5) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(26.33 80.79) rotate(-134.19) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(24.98 79.41) rotate(-130.98) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(23.42 77.66) rotate(-126.45) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(21.18 74.65) rotate(-120.76) scale(.94 1)">
+                            <tspan x="0" y="0">u</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(19.18 71.28) rotate(-115.24) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(17.68 68.14) rotate(-109.71) scale(.94 1)">
+                            <tspan x="0" y="0">h</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(16.38 64.4) rotate(-105.32) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(15.86 62.56) rotate(-102.19) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(15.39 60.36) rotate(-98.82) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(15.04 58.11) rotate(-95.71) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(14.85 56.22) rotate(-92.9) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(14.68 54.36) rotate(-87.91) scale(.94 1)">
+                            <tspan x="0" y="0">G</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(14.89 49.42) rotate(-81.49) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(15.46 45.71) rotate(-76.96) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(16 43.4) rotate(-73.75) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(16.55 41.55) rotate(-70.95) scale(.94 1)">
+                            <tspan x="0" y="0">i</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(17.08 39.87) rotate(-66.68) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(18.66 36.29) rotate(-62.36) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(19.54 34.58) rotate(-59.15) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(20.72 32.55) rotate(-54.58) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(22.88 29.49) rotate(-48.93) scale(.94 1)">
+                            <tspan x="0" y="0">u</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(25.48 26.52) rotate(-43.42) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(28 24.11) rotate(-37.95) scale(.94 1)">
+                            <tspan x="0" y="0">h</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(31.13 21.71) rotate(-33.61) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(32.72 20.65) rotate(-30.51) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(34.65 19.51) rotate(-27.16) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(36.68 18.47) rotate(-24.02) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(38.42 17.69) rotate(-21.17) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(40.15 16.94) rotate(-16.03) scale(.94 1)">
+                            <tspan x="0" y="0">G</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(44.88 15.61) rotate(-9.59) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(48.61 15) rotate(-5.03) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(50.98 14.8) rotate(-1.86) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(52.88 14.74) rotate(.93) scale(.94 1)">
+                            <tspan x="0" y="0">i</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(54.65 14.72) rotate(5.03) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(58.58 15.1) rotate(9.36) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(60.45 15.4) rotate(12.55) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(62.75 15.88) rotate(17.14) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(66.34 16.97) rotate(22.88) scale(.94 1)">
+                            <tspan x="0" y="0">u</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(69.95 18.5) rotate(28.42) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(73.05 20.16) rotate(33.96) scale(.94 1)">
+                            <tspan x="0" y="0">h</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(76.28 22.38) rotate(38.24) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(77.78 23.55) rotate(41.33) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-2" transform="translate(79.49 25.06) rotate(44.7) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <circle class="cls-1" cx="53.25" cy="53.25" r="53" />
+                    </g>
+                </g>
+            </svg>
+            <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.99 20.28">
+                <g id="img2">
+                    <path class="cls-1"
+                        d="M25.92,2.75c-.11-.55-.35-1.06-.71-1.5-.07-.09-.15-.17-.23-.25-.63-.64-1.51-1-2.41-1H3.41c-.91,0-1.77.36-2.41,1-.08.08-.16.16-.23.26-.35.43-.6.95-.7,1.49-.04.21-.07.44-.07.66v13.46c0,.47.1.92.28,1.36.16.38.41.75.72,1.06.08.08.15.15.23.22.61.51,1.38.78,2.18.78h19.16c.8,0,1.57-.28,2.18-.79.08-.07.16-.14.23-.21.3-.29.53-.63.7-1.01l.02-.05c.19-.43.28-.88.28-1.35V3.41c0-.22-.02-.45-.06-.66ZM1.77,2.18c.05-.07.11-.14.19-.22.39-.39.91-.6,1.46-.6h19.16c.55,0,1.07.21,1.46.61.07.07.13.14.19.22l.15.2-10.23,8.91c-.32.28-.72.43-1.14.43s-.82-.15-1.14-.43L1.63,2.37l.13-.19ZM1.36,16.99s0-.08,0-.12V3.69l7.94,6.92-7.86,6.85-.07-.48ZM23.6,18.66c-.31.18-.66.27-1.02.27H3.41c-.36,0-.72-.09-1.02-.27l-.32-.19,8.12-7.07.89.77c.53.46,1.21.72,1.92.72s1.39-.26,1.92-.72l.89-.77,8.11,7.07-.32.19ZM24.63,16.87s0,.08,0,.12l-.07.48-7.86-6.85,7.94-6.92v13.17Z" />
+                </g>
+            </svg>
+            <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.5 106.5">
+                <g id="img3">
+                    <g>
+                        <text class="cls-1" transform="translate(84.05 30.12) rotate(54.41) scale(.94 1)">
+                            <tspan x="0" y="0">l</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(85.08 31.5) rotate(58.46) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(87.01 34.69) rotate(62.96) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(88.08 36.8) rotate(66.02) scale(.94 1)">
+                            <tspan x="0" y="0">’</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(89.06 38.97) rotate(70.86) scale(.94 1)">
+                            <tspan x="0" y="0">s</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(90.16 42.22) rotate(74.86) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(90.68 44.03) rotate(78.88) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(91.36 47.42) rotate(84.25) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(91.72 51.12) rotate(89.07) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(91.73 55.07) rotate(94.44) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(91.58 57.37) rotate(98.91) scale(.94 1)">
+                            <tspan x="0" y="0">a</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(91 61.05) rotate(104.29) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(90.12 64.42) rotate(108.65) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(89.37 66.64) rotate(111.83) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(88.67 68.41) rotate(114.94) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(87.72 70.45) rotate(118.3) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(86.64 72.45) rotate(121.41) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(85.66 74.06) rotate(124.22) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(84.58 75.65) rotate(126.96) scale(.94 1)">
+                            <tspan x="0" y="0">l</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(83.56 77.07) rotate(131.03) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(81.09 79.87) rotate(135.51) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(79.4 81.52) rotate(138.54) scale(.94 1)">
+                            <tspan x="0" y="0">’</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(77.64 83.09) rotate(143.29) scale(.94 1)">
+                            <tspan x="0" y="0">s</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(74.88 85.12) rotate(147.25) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(73.3 86.17) rotate(151.27) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(70.28 87.84) rotate(156.63) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(66.83 89.34) rotate(162.37) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(63.12 90.49) rotate(167) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(60.85 91.05) rotate(171.54) scale(.94 1)">
+                            <tspan x="0" y="0">a</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(57.17 91.59) rotate(176.87) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(53.68 91.76) rotate(-178.87) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(51.33 91.71) rotate(-175.74) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(49.43 91.58) rotate(-172.66) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(47.22 91.3) rotate(-169.33) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(44.99 90.87) rotate(-166.2) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(43.14 90.42) rotate(-163.35) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(41.32 89.88) rotate(-160.6) scale(.94 1)">
+                            <tspan x="0" y="0">l</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(39.64 89.33) rotate(-156.46) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(36.22 87.81) rotate(-151.92) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(34.15 86.7) rotate(-148.89) scale(.94 1)">
+                            <tspan x="0" y="0">’</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(32.12 85.49) rotate(-144.11) scale(.94 1)">
+                            <tspan x="0" y="0">s</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(29.36 83.46) rotate(-140.17) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(27.89 82.28) rotate(-136.2) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(25.38 79.88) rotate(-130.86) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(22.92 77.05) rotate(-125.2) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(20.7 73.86) rotate(-120.59) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(19.49 71.87) rotate(-116.08) scale(.94 1)">
+                            <tspan x="0" y="0">a</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(17.85 68.52) rotate(-110.68) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(16.64 65.26) rotate(-106.34) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(15.98 62.99) rotate(-103.13) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(15.54 61.15) rotate(-100.04) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(15.15 58.94) rotate(-96.7) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(14.89 56.7) rotate(-93.63) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(14.77 54.79) rotate(-90.93) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(14.74 52.86) rotate(-88.09) scale(.94 1)">
+                            <tspan x="0" y="0">l</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(14.76 51.13) rotate(-84.06) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(15.17 47.42) rotate(-79.56) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(15.6 45.1) rotate(-76.51) scale(.94 1)">
+                            <tspan x="0" y="0">’</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(16.15 42.78) rotate(-71.66) scale(.94 1)">
+                            <tspan x="0" y="0">s</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(17.24 39.55) rotate(-67.69) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(17.93 37.79) rotate(-63.66) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(19.46 34.68) rotate(-58.28) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(21.43 31.48) rotate(-52.61) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(23.81 28.41) rotate(-48.03) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(25.34 26.66) rotate(-43.55) scale(.94 1)">
+                            <tspan x="0" y="0">a</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(28.03 24.1) rotate(-38.25) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(30.79 21.95) rotate(-33.91) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(32.74 20.65) rotate(-30.77) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(34.39 19.66) rotate(-27.64) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(36.38 18.62) rotate(-24.28) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(38.43 17.69) rotate(-21.17) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(40.19 17.01) rotate(-18.34) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(42 16.41) rotate(-15.59) scale(.94 1)">
+                            <tspan x="0" y="0">l</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(43.67 15.9) rotate(-11.48) scale(.94 1)">
+                            <tspan x="0" y="0">e</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(47.35 15.18) rotate(-6.93) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(49.7 14.9) rotate(-3.9) scale(.94 1)">
+                            <tspan x="0" y="0">’</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(52.06 14.72) rotate(.93) scale(.94 1)">
+                            <tspan x="0" y="0">s</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(55.48 14.8) rotate(4.71) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(57.37 14.92) rotate(8.73) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(60.8 15.44) rotate(14.12) scale(.94 1)">
+                            <tspan x="0" y="0">o</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(64.44 16.35) rotate(19.85) scale(.94 1)">
+                            <tspan x="0" y="0">n</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(68.1 17.7) rotate(24.5) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(70.24 18.64) rotate(29.03) scale(.94 1)">
+                            <tspan x="0" y="0">a</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(73.46 20.43) rotate(34.34) scale(.94 1)">
+                            <tspan x="0" y="0">c</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(76.35 22.42) rotate(38.68) scale(.94 1)">
+                            <tspan x="0" y="0">t</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(78.19 23.9) rotate(41.84) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(79.61 25.17) rotate(44.92) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(81.19 26.73) rotate(48.2) scale(.94 1)">
+                            <tspan x="0" y="0">!</tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(82.69 28.42) rotate(51.28) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <text class="cls-1" transform="translate(83.88 29.91) rotate(54.11) scale(.94 1)">
+                            <tspan x="0" y="0"> </tspan>
+                        </text>
+                        <circle class="cls-2" cx="53.25" cy="53.25" r="53" />
+                    </g>
+                </g>
+            </svg>
+            <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.78 25.53">
+                <g id="img4">
+                    <path class="cls-1"
+                        d="M0,10.42l1.3.94,7.38,5.35v8.25l6.42-3.59,5.74,4.16L31.78,0,0,10.42ZM3.56,10.98L27.48,3.13,9.72,15.44l-6.16-4.47ZM10.32,22.16v-4.27l3.32,2.41-3.32,1.86ZM20.14,23l-9.42-6.83L28.28,4l-8.14,19Z" />
+                </g>
+            </svg>
+        </a>
+        <!-- <a href=" " class="mailicon_hover-pc_only">
+            <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
+            <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
+            <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
+            <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
+        </a> -->
+
+
+
+        <!-- <a href="" id="mailiconPc" class="mailicon-pc_only">
             <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
             <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
         </a>
         <a href=" " class="mailicon_hover-pc_only">
             <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
             <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
-        </a>
+        </a> -->
         <div class="footer">
             <ul>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#works">WORKS</a></li>
-                <li><a href="/contact.html">CONTACT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
             </ul>
             <p class="copyright">MIEKO CHIBANA © 2024</p>
             <h2>MIEKO CHIBANA PORTFOLIO</h2>

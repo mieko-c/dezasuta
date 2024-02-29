@@ -252,13 +252,13 @@ canvas {
     line-height: 0.7;
 }
 
-.mailicon_hover-pc_only {
+/* .mailicon_hover-pc_only {
     position: fixed;
     bottom: 100px;
     right: 23px;
     width: 106px;
     height: 106px;
-}
+} */
 
 /* .mailicon_pc_only {
     position: fixed;
@@ -268,13 +268,13 @@ canvas {
     height: 106px;
 } */
 
-/* .mailicon_hover-pc_only {
+.mailicon_hover-pc_only {
     position: fixed;
     bottom: 260px;
     right: 23px;
     width: 106px;
     height: 106px;
-} */
+}
 
 .mailicon_circle_pc {
     position: absolute;
@@ -364,8 +364,8 @@ canvas {
     font-weight: 600;
     font-style: normal;
     font-size: 11.7vw;
-    white-space: nowrap; /* テキストを折り返さないように設定 */
-    overflow-wrap: normal; /*テキストがボックスの境界を超える場合は折り返さないように設定 */
+    white-space: nowrap; /*テキストを折り返さないように設定*/
+    overflow-wrap: normal; /*テキストがボックスの境界を超える場合は折り返さないように設定*/
     padding-top: 148px;
 }
 

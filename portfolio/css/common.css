@@ -29,6 +29,13 @@ li {
     --accent-color: #8e53a7;
 }
 
+/* リセットcssでbody内の背景色を指定 */
+body {
+    background-color: #f3f5fa;
+    overflow-x: hidden;
+    /* height: 200vh; */
+}
+
 a {
     /*下線を消す*/
     text-decoration: none;
@@ -49,13 +56,6 @@ a {
 .footer a:hover {
     color: #26130e;
     /* opacity: 0.5; */
-}
-
-/* リセットcssでbody内の背景色を指定 */
-body {
-    background-color: #f3f5fa;
-    overflow-x: hidden;
-    /* height: 200vh; */
 }
 
 ul {
@@ -93,7 +93,16 @@ img {
 }
 
 .loading_logo {
-    width: 40%;
+    width: 50%;
+    animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .loading_text {
@@ -106,12 +115,13 @@ img {
     font-family: "scotch-display", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 3vw;
     /* margin-top: 5px; */
 }
 
 #countup {
-    font-size: 10px;
+    font-size: 1vw;
     animation: change_color 2s linear infinite;
     /* margin-top: 10px; */
 }
@@ -151,14 +161,14 @@ img {
 } */
 
 .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 38px 13% 0 13%;
     z-index: 1;
     backdrop-filter: blur(5px);
@@ -276,6 +286,11 @@ canvas {
     height: 106px;
 }
 
+.mailicon_hover-pc_only::before {
+    background: url("mailicon_circle_pc.svg") no-repeat center center; /* フッターに入ったら画像を差し替える */
+    background: url("mailicon_pc.svg") no-repeat center center;
+}
+
 .mailicon_circle_pc {
     position: absolute;
     top: 0px;
@@ -302,7 +317,7 @@ canvas {
 .mailicon_hover-pc_only {
     position: fixed;
     bottom: 260px;
-    right: 23px;
+    right: 13px;
     width: 106px;
     height: 106px;
 }
@@ -345,10 +360,10 @@ canvas {
 }
 
 /* svgの塗りつぶし */
-.cls-1,
+/* .cls-1,
 .cls-2 {
     fill: var(--accent-color);
-}
+} */
 
 /* contactページ */
 
@@ -370,7 +385,7 @@ canvas {
 }
 
 .contact_text p {
-    font-size: 21px;
+    font-size: 2vw;
     line-height: 1.8;
     text-align: center;
     padding-top: 43px;
@@ -379,7 +394,11 @@ canvas {
 
 .contact_list {
     display: grid;
-    place-content: center;
+    /* place-content: center; */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2% 0 2%;
+    box-sizing: border-box;
 }
 
 .contact_name_field,
@@ -392,33 +411,29 @@ canvas {
 }
 
 .contact_list p {
-    font-size: 20px;
+    font-size: 2vw;
     display: inline-block;
 }
 
 .contact_name_field input,
 .contact_furigana_field input,
 .contact_email_field input,
-.contact_title_field input {
-    background-color: #e6e6e6;
-    border-radius: 20px;
-    width: 850px;
-    height: 50px;
-    border: none;
-    margin: 10px 0 57px 0;
-    padding: 25px;
-    font-size: 30px;
-}
-
+.contact_title_field input,
 .contact_msg_field textarea {
     background-color: #e6e6e6;
     border-radius: 20px;
-    width: 850px;
-    height: 450px;
+    /* width: 850px; */
+    width: 100%;
+    /* height: 50px; */
     border: none;
     margin: 10px 0 57px 0;
     padding: 25px;
     font-size: 30px;
+    box-sizing: border-box;
+}
+
+.contact_msg_field textarea {
+    height: 450px;
 }
 
 .contact_msg_field {
@@ -438,4 +453,173 @@ canvas {
     font-size: 30px;
     color: #ffffff;
     border: none;
+}
+
+/* ハンバーガーメニュー */
+.sp_btn,
+.sp_nav {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_btn {
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 45px;
+        /* top: 20px;
+        right: 25px; */
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .sp_btn::before {
+        content: ""; /* 必須プロパティ */
+        background-image: url(../images/hamburger_logo.svg);
+        /* 泉：
+           読み込めていなかった原因は以下です。
+           ・パス記述の頭に../が無い（親階層指定が必要）
+           ・ファイル名スペルミス
+           ・スラッシュ（/）がバックスラッシュ（\）になっている
+           ・セミコロン抜け
+           cssでのbackground-imageは読み込みが地味にエラーしがちですが、慣れです！ナイストライです！
+        */
+        background-size: cover; /* 画像を親要素に合わせる */
+        background-position: center; /* 画像を中央に配置 */
+        background-repeat: no-repeat; /* 泉：こちら追加ください */
+
+        /* 要素を上下中央に配置する4点セット */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 60px; /* 泉：数値はデザインデータに合わせてください */
+        height: 60px; /* 泉：数値はデザインデータに合わせてください */
+        z-index: -1; /* テキストや他の要素の上に配置するために必要な場合があります */
+    }
+    .sp_btn span {
+        top: 10px;
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 1px;
+        /* width: 33px;
+        height: 3px; */
+        border-radius: 2px;
+        background-color: #26130e;
+        transition: 0.3s;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 18px;
+        height: 1px;
+        border-radius: 2px;
+        background-color: #26130e;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガー閉じる */
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(230, 220, 204, 1);
+        z-index: 1;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #26130e;
+        font-size: 30px;
+        font-family: "scotch-display", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    /* メールアイコン */
+    .mailicon_hover-pc_only {
+        width: 75px;
+        height: 75px;
+    }
+    .mailicon_pc {
+        width: 19px;
+    }
+    .mailicon_change_pc {
+        width: 24px;
+    }
+    .contact_list {
+        padding: 0 6% 0 6%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact_name_field input,
+    .contact_furigana_field input,
+    .contact_email_field input,
+    .contact_title_field input,
+    .contact_msg_field textarea {
+        padding: 15px;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    .contact_text p {
+        padding-bottom: 60px;
+    }
+    .submit_button button {
+        width: 135px;
+        height: 61px;
+        font-size: 20px;
+    }
+    .contact_text p {
+        font-size: 13px;
+    }
+    .contact_list p {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .sp_nav ul li {
+        font-size: 18px;
+    }
+    .footer ul {
+        font-size: 12px;
+    }
 }

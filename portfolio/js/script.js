@@ -1,4 +1,4 @@
-// scotch display,scotch text,しっぽり明朝----------
+// scotch display,scotch text,しっぽり明朝---
   (function(d) {
     var config = {
       kitId: 'iim6jay',
@@ -7,9 +7,9 @@
     },
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
-//--------------------------------------------------
+//---
 
-// accent-color変化---------------------------------
+// accent-color変化---
 const root = document.querySelector(':root');
 
   // 選択可能な色の配列
@@ -19,37 +19,56 @@ const root = document.querySelector(':root');
   var randomColor = colors[Math.floor(Math.random() * colors.length)];
   
   root.style.setProperty("--accent-color", randomColor);
+//---
 
-$(function(){
+// $(function(){
    
-  $('.btn').on('click', function(){
-    $('.object').toggleClass('is-active');
-  });
+//   $('.btn').on('click', function(){
+//     $('.object').toggleClass('is-active');
+//   });
   
+// });
+
+// ハンバーガーメニュー---
+$('.sp_btn, .sp_nav Li').on('click', function () {
+  //ここの中に記述
+  $(".sp_nav").fadeToggle();
+  $(".sp_btn").toggleClass("open");
 });
-//--------------------------------------------------
+//---
 
+// お問い合わせアイコンをアクセントカラーに変更---
+$(function(){
 
+let path_icon;
+let path_icon_change;
+let path_circle;
+let path_circle_change;
+let accent_color;
 
-//aboutのオブジェクト変化----------------------------
-// スクロール時に実行する関数を定義
-function handleScroll() {
-  // スクロール位置を取得
-  var scrollPosition = window.scrollY;
-
-  // 条件に基づいてクラスをトグル
-  var square_transform = document.getElementById("square_transform");
-  if (scrollPosition > 300) { // 例: 100px以上スクロールしたら is-active クラスを追加、それ以外は削除
-    square_transform.classList.add("is-active");
-  } else {
-    square_transform.classList.remove("is-active");
-  }
+if(randomColor == "#a7536c"){
+  accent_color = 'pink';
+} else if(randomColor == "#418266"){
+  accent_color = 'green';
+} else if(randomColor == "#5373a7"){
+  accent_color = 'blue';
+} else if(randomColor == "#8e53a7"){
+  accent_color = 'purple';
 }
-// スクロールイベントリスナーを追加
-window.addEventListener("scroll", handleScroll);
-//---------------------------------------------------
 
-// footer波------------------------------------------
+path_icon = 'images/mailicon_pc_' + accent_color + '.svg';
+path_icon_change = 'images/mailicon_change_pc_' + accent_color + '.svg';
+path_circle = 'images/mailicon_circle_pc_' + accent_color + '.svg';
+path_circle_change = 'images/mailicon_circle_change_pc_' + accent_color + '.svg';
+$('.mailicon_pc').attr('src', path_icon);
+$('.mailicon_change_pc').attr('src', path_icon_change);
+$('.mailicon_circle_pc').attr('src', path_circle);
+$('.mailicon_circle_change_pc').attr('src', path_circle_change);
+
+});
+//---
+
+// footer波---
   var unit = 100,
   canvasList, // キャンバスの配列
   info = {}, // 全キャンバス共通の描画情報
@@ -140,47 +159,29 @@ function drawSine(canvas, t, zoom, delay) {
   }
 }
 init();
-//--------------------------------------------------
+//---
 
-//worksスライダー------------------------------------
-$(function () {
-  // $('.sp_btn, .sp_nav Li').on('click', function () {
-  //     //ここの中に記述
-  //     $(".sp_nav").fadeToggle();
-  //     $(".sp_btn").toggleClass("open");
-  // });
+//modal viweボタン---
+$(function(){
+  $(document).on({
+    'mouseenter': function () {
+      $('body').addClass('no-cursor');
+      $('.modal_viewButton').addClass('is-active');
+      document.addEventListener('mousemove', function (e) {
+        $('.modal_viewButton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
+      });
+    },
+  
+    'mouseleave': function () {
+      $('body').removeClass('no-cursor');
+      $('.modal_viewButton').removeClass('is-active');      
+    }
+  
+  }, '.works_img');
+});
+//---
 
-  $('.works_slider').slick({
-      dots: false,//インジケーターを非表示
-      infinite: true,//無限再生
-      speed: 1500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000
-  });
-})
-
-  // $('.gallery_slider').slick({
-  //     autoplay: true,
-  //     autoplaySpeed: 2000,
-  //     slidesToShow: 5,
-  //     slidesToScroll: 1,
-  //     responsive: [
-  //         {
-  //             breakpoint: 768,
-  //             settings: {
-  //                 slidesToShow: 1,
-  //             }
-  //         }
-  //     ]
-  // });
-// lightbox.option({
-// 'alwaysShowNavOnTouchDevices': true,
-// })
-//--------------------------------------------------
-
-//works viweボタン-----------------------------------
+//works viweボタン---
 $(function(){
   $(document).on({
     'mouseenter': function () {
@@ -197,77 +198,31 @@ $(function(){
     }
   }, '.slick-slide');
 });
-//--------------------------------------------------
+//---
 
-  // カウントアップの処理------------------------------
-let countup = 0; // カウントアップの初期値
+//worksスライダー---
+$(function () {
+$('.works_slider').slick({
+      dots: false,//インジケーターを非表示
+      infinite: true,//無限再生
+      speed: 1500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      // レスポンシブ
+      responsive: [{
+      breakpoint: 768,
+      settings: {
+      slidesToShow: 1
+      }
+    }]
+  });
+})
+//---
 
-function updateCountup() {
-  const countupElement = document.getElementById('countup');
-  countupElement.textContent = countup;
-
-  if (countup === 100) {
-    // カウントアップが終了したら何らかの処理を実行する
-    console.log('Loading complete!');
-  } else {
-    countup++;
-    setTimeout(updateCountup, 10); // 0.1秒ごとにカウントアップを更新
-  }
-}
-
-// カウントアップ開始
-updateCountup();
-
-// ローディング-------------------------------------- 
-jQuery(function () {
-  var webStorage = function () {
-    if (sessionStorage.getItem('access')) {
-      //2回目以降アクセス時の処理
-      console.log('2回目以降のアクセスです');
-    } else {
-      //初回アクセス時の処理
-      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
-      setTimeout(function () {
-        // ローディングを数秒後に非表示にする
-        $(".loading").removeClass('is-active');
-      }, 3000); // ローディングを表示する時間
-    }
-  }
-  webStorage();
-});
-
-
-
-
-// jQuery(function () {
-  // var webStorage = function () {
-    // if (sessionStorage.getItem('access')) {
-      //2回目以降アクセス時の処理
-      // console.log('2回目以降のアクセスです');
-      // $(".loading").addClass('is-active');
-      
-    // } else {
-      //初回アクセス時の処理
-      // sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
-      // $(".loading").addClass('is-active'); // loadingアニメーションを表示
-      // setTimeout(function () {
-        // ローディングを数秒後に非表示にする
-      //  $(".loading").addClass('is-active');
-      // $(".loading").removeClass('is-active');
-    //  }, 3000); // ローディングを表示する時間
-  // }
-  // }
-  // webStorage();
- 
-// });
-
-function hideLoadingScreen() {
-  const loadingContainer = document.querySelector('.loading-container');
-  loadingContainer.style.display = 'none';
-}
-
-//モーダル
-$(".modal_gallery").modaal({
+//モーダル---
+$(".modal_gallery").modal({
   type: 'image',
   overlay_close:true,//モーダル背景クリック時に閉じるか
   before_open:function(){// モーダルが開く前に行う動作
@@ -277,22 +232,24 @@ $(".modal_gallery").modaal({
     $('#works4_modal').css('overflow-y','scroll');/*縦スクロールバーを出す*/
   }
 });
-// -------------------------------------------
+// ---
 
+// function hideLoadingScreen() {
+//   const loadingContainer = document.querySelector('.loading-container');
+//   loadingContainer.style.display = 'none';
+// }
 
-//modal viweボタン-----------------------------------
-$(function(){
-  $(document).on({
-    'mouseenter': function () {
-      $('.modal_viewButton').addClass('is-active');
-      document.addEventListener('mousemove', function (e) {
-        $('.modal_viewButton').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
-      });
-    },
-  
-    'mouseleave': function () {
-      $('.modal_viewButton').removeClass('is-active');      
-    }
-  
-  }, '.works_img');
+// 保留コード---
+let wave = $('.wave').offset().top;
+let winH = $(window).height();
+var mailIcon = $('#mailicon');
+window.addEventListener('scroll', function() {
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > wave - winH + 500) {
+        mailIcon.addClass('is-active');
+      } else {
+        mailIcon.removeClass('is-active');
+      }
+  });
 });
+//---

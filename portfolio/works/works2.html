@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>miekochibana portfolio/新たな挑戦に年齢は関係ない</title>
+    <title>miekochibana portfolio</title>
     <meta name="description" content="ちばなみえこのポートフォリオサイトです。">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
@@ -18,11 +18,16 @@
 <body>
     <header>
         <div class="header_wrap">
-            <!-- pagetop-logo -->
-            <!-- <a class="pagetop-logo" href="/index.html">MIEKO CHIBANA<br>PORTFOLIO</a> -->
             <a class="pagetop-logo" href="../index.html">MIEKO CHIBANA<br>PORTFOLIO</a>
-            <!-- global-menu -->
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="../index.html#about">ABOUT</a></li>
+                    <li><a href="../index.html#works">WORKS</a></li>
+                    <li><a href="../contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="../index.html#about">ABOUT</a></li>
                     <li><a href="../index.html#works">WORKS</a></li>
@@ -39,6 +44,8 @@
     <div class="works_img">
         <img src="images/works2.jpg" alt="制作物２">
     </div>
+    <!-- <div class="modal_viewButton">VIEW</div> -->
+
     <div class="works_text">
         <dl>
             <dt>目的</dt>
@@ -62,12 +69,12 @@
     </div>
 
     <ul class="works_slider">
-        <li class="works1"><a href=""><img src="images/works1_slide.jpg" alt="バナー１"></a></li>
+        <li class="works1"><a href="./works1.html"><img src="images/works1_slide.jpg" alt="バナー１"></a></li>
         <!-- <li class="works2"><a href=""><img src="images/works2.jpg" alt="バナー２"></a></li> -->
-        <li class="works3"><a href=""><img src="images/works3_slide.jpg" alt="バナー３"></a></li>
-        <li class="works4"><a href=""><img src="images/works4_slide.jpg" alt="ＬＰ１"></a></li>
-        <li class="works5"><a href=""><img src="images/works5_slide.jpg" alt="ＬＰ２"></a></li>
-        <li class="works6"><a href=""><img src="images/cafe_site_slide.jpg" alt="カフェサイト"></a></li>
+        <li class="works3"><a href="./works3.html"><img src="images/works3_slide.jpg" alt="バナー３"></a></li>
+        <li class="works4"><a href="./works4.html"><img src="images/works4_slide.jpg" alt="ＬＰ１"></a></li>
+        <li class="works5"><a href="./works5.html"><img src="images/works5_slide.jpg" alt="ＬＰ２"></a></li>
+        <li class="works6"><a href="./works6.html"><img src="images/cafe_site_slide.jpg" alt="カフェサイト"></a></li>
     </ul>
     <div id="viewButton" class="viewbutton">VIEW</div>
 
@@ -75,19 +82,25 @@
         <canvas id="waveCanvas"></canvas>
     </div>
     <footer>
-        <a href="" id="mailiconPc" class="mailicon-pc_only">
+        <a href="../contact.html" class="mailicon_hover-pc_only">
+            <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
+            <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
+            <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
+            <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
+        </a>
+        <!-- <a href="" id="mailiconPc" class="mailicon-pc_only">
             <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
             <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
         </a>
         <a href=" " class="mailicon_hover-pc_only">
             <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
             <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
-        </a>
+        </a> -->
         <div class="footer">
             <ul>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="/contact.html">CONTACT</a></li>
+                <li><a href="../index.html#about">ABOUT</a></li>
+                <li><a href="../index.html#works">WORKS</a></li>
+                <li><a href="../contact.html">CONTACT</a></li>
             </ul>
             <p class="copyright">MIEKO CHIBANA © 2024</p>
             <h2>MIEKO CHIBANA PORTFOLIO</h2>
@@ -95,30 +108,7 @@
     </footer>
 
     <script src="../js/script.js"></script>
-    <script>
-        $(function () {
-            $('.sp_btn, .sp_nav Li').on('click', function () {
-                //ここの中に記述
-                $(".sp_nav").fadeToggle();
-                $(".sp_btn").toggleClass("open");
-            });
 
-            //     $('.works_slider').slick({
-            //         autoplay: true,
-            //         autoplaySpeed: 2000,
-            //         slidesToShow: 3,
-            //         slidesToScroll: 1,
-            //         responsive: [
-            //             {
-            //                 breakpoint: 768,
-            //                 settings: {
-            //                     slidesToShow: 1,
-            //                 }
-            //             }
-            //         ]
-            //     });
-        });
-    </script>
     <!-- <script>
         lightbox.option({
             'alwaysShowNavOnTouchDevices': true,

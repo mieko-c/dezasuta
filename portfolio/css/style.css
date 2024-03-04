@@ -2,7 +2,7 @@
     min-height: 100svh;
 }
 
-.fv h1 {
+.pc_fv {
     font-family: "scotch-display", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -80,10 +80,11 @@
     justify-content: space-between;
     align-items: center;
     /* padding: 835px 0 197px 0; */
-    padding: 0px 0 197px 0;
+    padding: 100px 0 197px 0;
     width: 100%;
-    padding-left: 5.8%;
+    padding-left: 3%;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* .square {
@@ -157,23 +158,25 @@
 } */
 
 .about_text {
-    padding-left: 5.8%;
+    /* padding-left: 5.8%; */
+    padding: 0 6% 0 2%;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    width: 50%;
+    /* width: 50%; */
+    width: 45%;
     box-sizing: border-box;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 
 .about_text h2 {
     font-size: 24px;
-    padding-bottom: 27px;
+    padding-bottom: 10px;
     color: var(--accent-color);
 }
 
 .about_text h3 {
     font-size: 24px;
-    padding: 47px 0 27px 0;
+    padding: 35px 0 10px 0;
     color: var(--accent-color);
 }
 
@@ -186,6 +189,7 @@
 .family {
     position: relative;
     margin-bottom: 358px;
+    overflow: hidden;
 }
 
 .family_heading {
@@ -242,6 +246,7 @@
 
 .works {
     padding-top: 100px;
+    overflow-x: hidden;
 }
 
 .works_title {
@@ -422,9 +427,138 @@
 }
 
 .thanks_text p {
-    font-size: 25px;
+    font-size: 3vw;
     line-height: 1.8;
     padding-top: 90px;
     padding-bottom: 90px;
     text-align: center;
+}
+
+.sp_fv {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .about {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 100px 0 150px 0;
+    }
+    .about_text {
+        padding-left: 6.5%;
+        padding-right: 6.5%;
+        width: 100%;
+    }
+    .about_text h2,
+    .about_text h3 {
+        padding: 47px 0 47px 0;
+    }
+    .about_text p {
+        line-height: 2;
+    }
+    .about_heading {
+        transform: translateY(-332%);
+        right: 0;
+        position: static;
+    }
+    .square {
+        width: 82vw;
+        height: 82vw;
+    }
+    .about_heading h2 {
+        font-size: 10vw;
+    }
+    .about_heading h3 {
+        font-size: 4vw;
+    }
+    .works {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .works ul {
+        margin-left: 4.3%;
+    }
+    .slick-prev {
+        left: -4.3%;
+    }
+    .works_title h3 {
+        font-size: 69px;
+    }
+    .works_title h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .slick-next,
+    .slick-prev {
+        width: 7rem;
+        height: 7rem;
+    }
+    .slick-next:before,
+    .slick-prev:before {
+        width: 30px;
+        height: 30px;
+    }
+    .slick-prev:before {
+        left: 59%;
+    }
+    .works ul {
+        margin-left: 7.3%;
+    }
+    .slick-prev {
+        left: -7.3%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    /* fv */
+    .pc_fv {
+        display: none;
+    }
+    .sp_fv {
+        display: block;
+        font-family: "scotch-display", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 19vw;
+        transform: scaleX(0.83);
+        position: absolute;
+        top: 121px;
+        left: -5%;
+        line-height: 0.7;
+        white-space: nowrap; /* テキストを折り返さないように設定 */
+        overflow-wrap: normal; /* テキストがボックスの境界を超える場合は折り返さないように設定 */
+    }
+    .about_text h2,
+    h3 {
+        font-size: 22px;
+    }
+    .about_text p {
+        font-size: 15px;
+    }
+
+    .pc_only_photo {
+        display: none;
+    }
+    .family_heading span {
+        font-size: 184vw;
+    }
+    .family_heading span:first-child {
+        animation: loop 50s -25s linear infinite;
+    }
+
+    .family_heading span:last-child {
+        animation: loop2 50s linear infinite;
+    }
+    /* works */
+    .works_title h3 {
+        font-size: 38px;
+    }
+    .works_title h2 {
+        font-size: 15px;
+    }
 }

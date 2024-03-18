@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiekoChibana Portfolio-２児ママ未経験からデザイナーへ</title>
+    <meta name="description" content="ちばなみえこのポートフォリオサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_wrap">
+            <a class="pagetop-logo" href="./index.html">MIEKO CHIBANA<br>PORTFOLIO</a>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="./index.html#about">ABOUT</a></li>
+                    <li><a href="./index.html#works">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="./index.html#about">ABOUT</a></li>
+                    <li><a href="./index.html#works">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="contact_text">
+        <h1>CONTACT</h1>
+        <p>ご覧いただき誠にありがとうございます。<br>お気軽にお問い合わせください。</p>
+    </div>
+    <div class="contact_container">
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScqnpCoIHvYQ6OGlsx2Slz7SjN8oqO1lS5ECl7sEPG953OTVg/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="contact_list">
+                <div class="contact_name_field">
+                    <p class="contact_name"><label for="name">お名前</label></p><br>
+                    <input type="text" id="name" name="entry.166861332" required>
+                </div>
+                <div class="contact_furigana_field">
+                    <p class="contact_furigana"><label for="furigana">ふりがな</label></p><br>
+                    <input type="text" id="furigana" name="entry.1729026386" required>
+                </div>
+                <div class="contact_email_field">
+                    <p class="contact_email"><label for="email">メールアドレス</label></p><br>
+                    <input type="email" id="email" name="entry.1175492647" required>
+                </div>
+                <div class="contact_title_field">
+                    <p class="contact_title"><label for="title">題名</label></p><br>
+                    <input type="text" id="title" name="entry.2007849813" required>
+                </div>
+                <div class="contact_msg_field">
+                    <p class="contact_msg"><label for="msg">メッセージ</label></p><br>
+                    <textarea name="entry.1512965484" id="msg" required></textarea>
+                </div>
+
+                <div class="submit_button">
+                    <button type="submit" name="button">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted)  {window.location='.html';}"></iframe>
+
+    <div class="wave">
+        <canvas id="waveCanvas"></canvas>
+    </div>
+    <footer>
+        <div class="footer">
+            <ul>
+                <li><a href="./index.html#about">ABOUT</a></li>
+                <li><a href="./index.html#works">WORKS</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+            <p class="copyright">MIEKO CHIBANA © 2024</p>
+            <h2>MIEKO CHIBANA PORTFOLIO</h2>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

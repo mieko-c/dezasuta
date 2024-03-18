@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>miekochibana portfolio</title>
+    <title>制作実績-MiekoChibana Portfolio</title>
     <meta name="description" content="ちばなみえこのポートフォリオサイトです。">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
         integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -48,9 +48,8 @@
         <h1>WORKS</h1>
         <p>制作物</p>
     </div>
-    <div class="works_img">
+    <div class="works_img_modal">
         <a href="images/works5.jpg" data-lightbox="lightbox"><img class="works5" src="images/works5.jpg" alt="制作物５"></a>
-        <!-- <img class="works4_sp" src="images/works4_sp.jpg" alt="制作物４ＳＰ"> -->
     </div>
     <div class="modal_viewButton">VIEW</div>
 
@@ -68,8 +67,7 @@
                 全体のバランス</dd>
             <dt>苦労したこと</dt>
             <dd>メインビジュアルのぼかし加減<br>
-                全体のバランスを見ながら画像の配置や文字のサイズを<br>
-                調整する</dd>
+                全体のバランスを見ながら画像の配置や文字のサイズを調整する</dd>
             <dt>解決方法</dt>
             <dd>引いてみてバランスを確認する<br>
                 講師に添削してもらう</dd>
@@ -85,7 +83,6 @@
         <li class="works2"><a href="./works2.html"><img src="images/works2.jpg" alt="バナー２"></a></li>
         <li class="works3"><a href="./works3.html"><img src="images/works3_slide.jpg" alt="バナー３"></a></li>
         <li class="works4"><a href="./works4.html"><img src="images/works4_slide.jpg" alt="ＬＰ１"></a></li>
-        <!-- <li class="works5"><a href=""><img src="images/works5_slide.jpg" alt="ＬＰ２"></a></li> -->
         <li class="works6"><a href="./works6.html"><img src="images/cafe_site_slide.jpg" alt="カフェサイト"></a></li>
     </ul>
     <div id="viewButton" class="viewbutton">VIEW</div>
@@ -100,14 +97,15 @@
             <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
             <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
         </a>
-        <!-- <a href="" id="mailiconPc" class="mailicon-pc_only">
-            <img src="images/mailicon_circle_pc.svg" alt="ＰＣメールサークル" class="mailicon_circle_pc">
-            <img src="images/mailicon_pc.svg" alt="ＰＣメールアイコン" class="mailicon_pc">
+
+        <a href="./contact.html" id="footer_mailicon-pc" class="footer_mailicon-pc">
+            <img src="images/mailicon_circle_pc_white.svg" alt="フッターメールサークル" class="footer_mailicon_circle">
+            <img src="images/mailicon_pc_white.svg" alt="フッターメールアイコン" class="footer_mailicon">
+            <img src="images/mailicon_circle_change_pc_white.svg" alt="フッターメールサークルチェンジ"
+                class="footer_mailicon_circle_change">
+            <img src="images/mailicon_change_pc_white.svg" alt="フッターメールアイコンチェンジ" class="footer_mailicon_change">
         </a>
-        <a href=" " class="mailicon_hover-pc_only">
-            <img src="images/mailicon_circle_change_pc.svg" alt="ＰＣメールサークルチェンジ" class="mailicon_circle_change_pc">
-            <img src="images/mailicon_change_pc.svg" alt="ＰＣメールアイコンチェンジ" class="mailicon_change_pc">
-        </a> -->
+
         <div class="footer">
             <ul>
                 <li><a href="../index.html#about">ABOUT</a></li>
@@ -122,11 +120,6 @@
     <script src="../js/script.js"></script>
     <script src="../js/lightbox_option.js"></script>
 
-    <!-- <script>
-        lightbox.option({
-            'alwaysShowNavOnTouchDevices': true,
-        })
-    </script> -->
 </body>
 
 </html>

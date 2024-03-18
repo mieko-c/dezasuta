@@ -26,6 +26,10 @@ li {
     font-feature-settings: "palt";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     /*下線を消す*/
     text-decoration: none;

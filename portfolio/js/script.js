@@ -21,19 +21,39 @@ const root = document.querySelector(':root');
   root.style.setProperty("--accent-color", randomColor);
 //---
 
-// $(function(){
-   
-//   $('.btn').on('click', function(){
-//     $('.object').toggleClass('is-active');
-//   });
-  
-// });
-
 // ハンバーガーメニュー---
 $('.sp_btn, .sp_nav Li').on('click', function () {
   //ここの中に記述
   $(".sp_nav").fadeToggle();
   $(".sp_btn").toggleClass("open");
+});
+//---
+
+// メールアイコンがフッターにいる時とそれ以外で色が変わる---
+let wave = $('.wave').offset().top;
+let winH = $(window).height();
+var mailIcon = $('#mailicon')
+window.addEventListener('scroll', function() {
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > wave - winH + 500) {
+        mailIcon.addClass('is-active');
+      } else {
+        mailIcon.removeClass('is-active');
+      }
+  });
+});
+
+let wave2 = $('.wave').offset().top;
+let winH2 = $(window).height();
+var mailIcon2 = $('#footer_mailicon-pc')
+window.addEventListener('scroll', function() {
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > wave2 - winH2 + 500) {
+        mailIcon2.addClass('is-active');
+      } else {
+        mailIcon2.removeClass('is-active');
+      }
+  });
 });
 //---
 
@@ -177,7 +197,7 @@ $(function(){
       $('.modal_viewButton').removeClass('is-active');      
     }
   
-  }, '.works_img');
+  }, '.works_img_modal');
 });
 //---
 
@@ -219,37 +239,4 @@ $('.works_slider').slick({
     }]
   });
 })
-//---
-
-//モーダル---
-$(".modal_gallery").modal({
-  type: 'image',
-  overlay_close:true,//モーダル背景クリック時に閉じるか
-  before_open:function(){// モーダルが開く前に行う動作
-    $('#works4_modal').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
-  },
-  after_close:function(){// モーダルが閉じた後に行う動作
-    $('#works4_modal').css('overflow-y','scroll');/*縦スクロールバーを出す*/
-  }
-});
-// ---
-
-// function hideLoadingScreen() {
-//   const loadingContainer = document.querySelector('.loading-container');
-//   loadingContainer.style.display = 'none';
-// }
-
-// 保留コード---
-let wave = $('.wave').offset().top;
-let winH = $(window).height();
-var mailIcon = $('#mailicon');
-window.addEventListener('scroll', function() {
-  $(window).scroll(function () {
-      if ($(this).scrollTop() > wave - winH + 500) {
-        mailIcon.addClass('is-active');
-      } else {
-        mailIcon.removeClass('is-active');
-      }
-  });
-});
 //---

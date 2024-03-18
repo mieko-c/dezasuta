@@ -21,7 +21,6 @@
     position: absolute;
     left: 11%;
     top: 524px;
-    /* top: 418px; */
     /*全体の高さ*/
     height: 321px;
 }
@@ -80,7 +79,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 835px 0 197px 0; */
     padding: 100px 0 197px 0;
     width: 100%;
     padding-left: 3%;
@@ -88,27 +86,14 @@
     box-sizing: border-box;
 }
 
-/* .square {
-    /* position: relative; */
-/* width: 50vw; */
-/* height: 50vw; */
-/* border-radius: 50px; */
-/* background-color: var(--accent-color); */
-/* text-align: center; */
-/* display: flex; */
-/* flex-direction: column; */
-/* justify-content: center; */
-/* align-items: center; */
-/* transition: 10s; */
-/* } */
 .square {
-    /* position: relative; */
     width: 50vw;
     height: 50vw;
     border-radius: 50px;
     background-color: var(--accent-color);
     transition: 5s;
 }
+
 .square.is-active {
     border-radius: 99rem;
     transform: rotate(-90deg);
@@ -124,21 +109,12 @@
     right: 60%;
 }
 
-/* .square h2 {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 7.3vw;
-    font-family: "scotch-display", sans-serif;
-    color: #ffffff;
-    transform: rotate(none);
-} */
 .about_heading h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 7.3vw;
     font-family: "scotch-display", sans-serif;
     color: #ffffff;
-    /* transform: rotate(none); */
 }
 
 .about_heading h3 {
@@ -147,26 +123,14 @@
     font-style: normal;
     font-size: 1.7vw;
     color: #ffffff;
-    /* rotate: none; */
 }
-/* .square h3 {
-    font-family: "shippori-mincho", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.7vw;
-    color: #ffffff;
-    rotate: none;
-} */
 
 .about_text {
-    /* padding-left: 5.8%; */
     padding: 0 6% 0 2%;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    /* width: 50%; */
     width: 45%;
     box-sizing: border-box;
-    /* padding-top: 100px; */
 }
 
 .about_text h2 {
@@ -282,9 +246,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    /* overflow: hidden; 表示領域外のコンテンツを非表示にする */
     margin-left: 2.4%;
-    /* margin-right: 2.4%; */
 }
 
 .works ul li {
@@ -293,10 +255,6 @@
     overflow: hidden;
     border-radius: 9.7%;
 }
-
-/* .works ul li:last-child {
-    margin-right: none;
-} */
 
 .works img {
     transition: 1s all;
@@ -310,7 +268,6 @@
 
 /* works右矢印調整 */
 .slick-next {
-    /* right: -77px; */
     width: 12rem;
     height: 12rem;
     background-color: black;
@@ -318,8 +275,8 @@
     opacity: 0.5;
     transform: translate(50%, -50%);
     right: 0px;
-    /* transform: translate(60px, -88px); */
 }
+
 .slick-next:before {
     content: "";
     display: block;
@@ -331,9 +288,9 @@
     position: relative;
     left: 10%;
 }
+
 /* works左矢印調整 */
 .slick-prev {
-    /* left: 77px; */
     z-index: 1;
     width: 12rem;
     height: 12rem;
@@ -342,8 +299,8 @@
     opacity: 0.5;
     transform: translate(-50%, -50%);
     left: -2.4%;
-    /* transform: translate(-88px, -88px); */
 }
+
 .slick-prev:before {
     content: "";
     display: block;
@@ -381,18 +338,9 @@
     cursor: none;
 }
 
-/* .works_slider {
-    cursor: none;
-} */
-
 .viewbutton.is-active {
     opacity: 1;
     cursor: none;
-}
-
-/* .thanks_footer {
-    height: 304px;
-    background-color: var(--accent-color);
 }
 
 .thanks_footer p {
@@ -403,12 +351,7 @@
     font-size: 7.3vw;
     transform: scaleX(0.97);
     white-space: nowrap; /* テキストを折り返さないように設定 */
-/* overflow-wrap: normal; テキストがボックスの境界を超える場合は折り返さないように設定 */
-/* position: absolute; */
-/* top: 900px; */
-/* right: -16px; */
-/* line-height: 0; */
-/* } */
+}
 
 .thanks_text {
     display: flex;
@@ -452,39 +395,48 @@
     .scrolldown {
         top: 353px;
     }
+
     .about {
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding: 100px 0 150px 0;
     }
+
     .about_text {
         padding-left: 6.5%;
         padding-right: 6.5%;
         width: 100%;
     }
+
     .about_text h2,
     .about_text h3 {
         padding: 47px 0 47px 0;
     }
+
     .about_text p {
         line-height: 2;
     }
+
     .about_heading {
         transform: translateY(-332%);
         right: 0;
         position: static;
     }
+
     .square {
         width: 82vw;
         height: 82vw;
     }
+
     .about_heading h2 {
         font-size: 10vw;
     }
+
     .about_heading h3 {
         font-size: 4vw;
     }
+
     .works {
         padding-top: 100px;
     }
@@ -494,15 +446,19 @@
     .scrolldown {
         top: 291px;
     }
+
     .works ul {
         margin-left: 4.3%;
     }
+
     .slick-prev {
         left: -4.3%;
     }
+
     .works_title h3 {
         font-size: 69px;
     }
+
     .works_title h2 {
         font-size: 20px;
     }
@@ -512,25 +468,31 @@
     .scrolldown p {
         display: none;
     }
+
     .scrolldown {
         top: 226px;
     }
+
     .slick-next,
     .slick-prev {
         width: 7rem;
         height: 7rem;
     }
+
     .slick-next:before,
     .slick-prev:before {
         width: 30px;
         height: 30px;
     }
+
     .slick-prev:before {
         left: 59%;
     }
+
     .works ul {
         margin-left: 7.3%;
     }
+
     .slick-prev {
         left: -7.3%;
     }
@@ -541,6 +503,7 @@
     .pc_fv {
         display: none;
     }
+
     .sp_fv {
         display: block;
         font-family: "scotch-display", sans-serif;
@@ -555,13 +518,16 @@
         white-space: nowrap; /* テキストを折り返さないように設定 */
         overflow-wrap: normal; /* テキストがボックスの境界を超える場合は折り返さないように設定 */
     }
+
     .scrolldown {
         top: 295px;
     }
+
     .about_text h2,
     h3 {
         font-size: 22px;
     }
+
     .about_text p {
         font-size: 15px;
     }
@@ -569,9 +535,11 @@
     .pc_only_photo {
         display: none;
     }
+
     .family_heading span {
         font-size: 184vw;
     }
+
     .family_heading span:first-child {
         animation: loop 50s -25s linear infinite;
     }
@@ -579,10 +547,12 @@
     .family_heading span:last-child {
         animation: loop2 50s linear infinite;
     }
+
     /* works */
     .works_title h3 {
         font-size: 38px;
     }
+
     .works_title h2 {
         font-size: 15px;
     }

@@ -135,13 +135,13 @@
 
 .about_text h2 {
     font-size: 24px;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
     color: var(--accent-color);
 }
 
 .about_text h3 {
     font-size: 24px;
-    padding: 35px 0 10px 0;
+    padding: 35px 0 40px 0;
     color: var(--accent-color);
 }
 
@@ -465,10 +465,6 @@
 }
 
 @media screen and (max-width: 431px) {
-    .scrolldown p {
-        display: none;
-    }
-
     .scrolldown {
         top: 226px;
     }
@@ -495,6 +491,10 @@
 
     .slick-prev {
         left: -7.3%;
+    }
+
+    .square {
+        transition: 8s;
     }
 }
 

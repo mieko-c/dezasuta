@@ -61,7 +61,7 @@
 }
 
 .works_text dl {
-    font-size: 25px;
+    font-size: 18px;
     padding: 218px 13% 259px 13%;
 }
 
@@ -138,7 +138,7 @@
     border-radius: 50%;
     opacity: 0.5;
     transform: translate(-50%, -50%);
-    left: -2.4%;
+    left: -0.4%;
 }
 
 .slick-prev:before {
@@ -249,10 +249,6 @@
     .works ul {
         margin-left: 4.3%;
     }
-
-    .slick-prev {
-        left: -4.3%;
-    }
 }
 
 @media screen and (max-width: 431px) {
@@ -285,10 +281,6 @@
 
     .works_slider {
         padding-left: 7.3%;
-    }
-
-    .slick-prev {
-        left: 0;
     }
 }
 

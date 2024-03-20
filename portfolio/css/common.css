@@ -33,6 +33,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* webフォントのちらつきをなくす */
+html {
+    visibility: hidden;
+}
+html.wf-active,
+html.wfno-load {
+    visibility: visible;
+}
+/* --- */
+
 /* リセットcssでbody内の背景色を指定 */
 body {
     background-color: #f3f5fa;
@@ -193,6 +203,7 @@ img {
     position: relative;
     height: 200px; /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
     margin-top: 459px;
+    margin-bottom: -1px;
 }
 
 canvas {
@@ -231,11 +242,10 @@ canvas {
     font-weight: 300;
     font-style: normal;
     font-size: 11px;
-    padding-bottom: 24px;
     text-align: center;
 }
 
-.footer h2 {
+.footer_logo {
     color: #ffffff;
     font-family: "scotch-display", sans-serif;
     font-weight: 600;
@@ -245,6 +255,8 @@ canvas {
     white-space: nowrap; /*テキストを折り返さないように設定*/
     overflow-wrap: normal; /*テキストがボックスの境界を超える場合は折り返さないように設定*/
     line-height: 0.7;
+    padding-top: 24px;
+    overflow-y: hidden;
 }
 
 .mailicon_circle_pc {
@@ -272,7 +284,7 @@ canvas {
 
 .mailicon_hover-pc_only {
     position: fixed;
-    bottom: 260px;
+    bottom: 8vw;
     right: 13px;
     width: 106px;
     height: 106px;
@@ -317,7 +329,7 @@ canvas {
 .footer_mailicon-pc {
     display: none;
     position: fixed;
-    bottom: 260px;
+    bottom: 8vw;
     right: 13px;
     width: 106px;
     height: 106px;
